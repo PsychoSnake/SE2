@@ -1,0 +1,47 @@
+/*
+===============================================================================
+ Name        : Test.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#include "core_cm3.h"
+#endif
+
+#include <cr_section_macros.h>
+
+#include <stdio.h>
+
+#define LED_PIN_ID 1 << 22
+
+int ledState = 1;
+
+
+int main(void) {
+
+	SystemCoreClockUpdate();
+	LPC_GPIO0->FIODIR = LED_PIN_ID;
+	LPC_GPIO0->FIOSET = LED_PIN_ID;
+	SysTick_Config(SystemCoreClock);
+
+    while(1){
+
+    }
+
+    return 0 ;
+}
+
+
+void SysTick_Handler(void){
+	if(ledState){
+		LPC_GPIO0->FIOCLR = LED_PIN_ID;
+		ledState = 0;
+	}
+	else
+		LPC_GPIO0->FIOSET = LED_PIN_ID;
+}
