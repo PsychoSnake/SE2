@@ -1,0 +1,45 @@
+#include "LPC17xx.h"
+#include "keypad.h"
+#include "led.h"
+
+void delay(int time);
+
+int layoutTest[] = {5,6,7,8,9,10,11,12,14,15,16,17,18};
+
+
+int ms;
+
+
+void Delay(uint32_t time){
+	ms = 0;
+	while( ms < time )
+		__WFI();
+}
+
+void SysTick_Handler(void){
+	ms++;
+}
+
+int main(){
+	SystemCoreClockUpdate();
+		LPC_GPIO0->FIODIR |= LED_PIN_ID;
+		LPC_GPIO0->FIOCLR = LED_PIN_ID;
+
+		if(SysTick_Config(SystemCoreClock / 1000)){
+			printf("ERROR on SysTickConfig()");
+			while(1){}
+		}
+
+	int i;
+	int key;
+	while(1){
+		key = KEYPAD_Read();
+		for(i = 0; i < key; i++){
+			LPC_GPIO0->FIOSET = LED_PIN_ID;
+			Delay(250);
+			LPC_GPIO0->FIOCLR = LED_PIN_ID;
+			Delay(250);
+		}
+
+	}
+}

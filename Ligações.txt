@@ -1,0 +1,21 @@
+Nao existe VIN(EXT_POWX) pois isto so seria usado se nao houvesse ICE.
+
+VCC_OUT:
+PIN 28
+
+GND:
+PIN 1
+PIN 54
+
+KeyPad:
+Linhas-  PIN 5 - PIN 8
+Colunas- PIN 15 - PIN 17
+
+
+
+
+LCD:
+MOSI - PIN 11
+SCK - PIN 13
+RST - PIN 12
+CS - PIN 14

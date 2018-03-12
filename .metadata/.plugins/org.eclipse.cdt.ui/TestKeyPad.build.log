@@ -1,0 +1,6 @@
+18:28:39 **** Incremental Build of configuration Debug for project TestKeyPad ****
+make -r -j8 all 
+make: Nothing to be done for `all'.
+
+18:28:39 Build Finished (took 141ms)
+

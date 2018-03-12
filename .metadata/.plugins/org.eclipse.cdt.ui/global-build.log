@@ -1,313 +1,42 @@
-17:41:11 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+18:28:28 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for `all'.
-17:41:12 **** Incremental Build of configuration Debug for project Test ****
+18:28:29 **** Incremental Build of configuration Debug for project TestKeyPad ****
 make -r -j8 all 
-Building file: ../src/Test.c
+Building file: ../src/KeyPad_Test.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-Finished building: ../src/Test.c
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\TestKeyPad\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\Debug" -I"C:\Users\PsychoSnake\Downloads\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/KeyPad_Test.d" -MT"src/KeyPad_Test.o" -MT"src/KeyPad_Test.d" -o "src/KeyPad_Test.o" "../src/KeyPad_Test.c"
+../src/KeyPad_Test.c: In function 'main':
+../src/KeyPad_Test.c:11:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+    printf("ERROR on SysTickConfig()");
+    ^~~~~~
+../src/KeyPad_Test.c:18:9: warning: implicit declaration of function 'KEYPAD_Read' [-Wimplicit-function-declaration]
+   key = KEYPAD_Read();
+         ^~~~~~~~~~~
+Finished building: ../src/KeyPad_Test.c
  
-Building target: Test.axf
+Building target: TestKeyPad.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
+arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Downloads\CMSIS_CORE_LPC17xx\Debug" -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\Debug" -Xlinker -Map="TestKeyPad.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "TestKeyPad_Debug.ld" -o "TestKeyPad.axf"  ./src/KeyPad_Test.o   -lCMSIS_CORE_LPC17xx -lLPC1769
 Memory region         Used Size  Region Size  %age Used
-       MFlash512:        3208 B       512 KB      0.61%
-        RamLoc32:         492 B        32 KB      1.50%
+       MFlash512:          40 B       512 KB      0.01%
+        RamLoc32:          0 GB        32 KB      0.00%
         RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
+c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol ResetISR; defaulting to 00000000
+Finished building target: TestKeyPad.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
+arm-none-eabi-size "TestKeyPad.axf"; # arm-none-eabi-objcopy -v -O binary "TestKeyPad.axf" "TestKeyPad.bin" ; # checksum -p LPC1769 -d "TestKeyPad.bin";
    text	   data	    bss	    dec	    hex	filename
-   3200	      8	    484	   3692	    e6c	Test.axf
+     40	      0	      0	     40	     28	TestKeyPad.axf
  
-17:45:20 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+18:28:36 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for `all'.
-17:45:22 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-Building file: ../src/Test.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-Finished building: ../src/Test.c
- 
-Building target: Test.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:        3212 B       512 KB      0.61%
-        RamLoc32:         492 B        32 KB      1.50%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
-   text	   data	    bss	    dec	    hex	filename
-   3204	      8	    484	   3696	    e70	Test.axf
- 
-17:45:25 **** Incremental Build of configuration Debug for project Test ****
+18:28:37 **** Incremental Build of configuration Debug for project TestKeyPad ****
 make -r -j8 all 
 make: Nothing to be done for `all'.
-17:47:45 **** Incremental Build of configuration Debug for project Test ****
+18:28:39 **** Incremental Build of configuration Debug for project TestKeyPad ****
 make -r -j8 all 
 make: Nothing to be done for `all'.
-17:48:03 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-make: Nothing to be done for `all'.
-17:48:14 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-make: Nothing to be done for `all'.
-17:48:15 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-make: Nothing to be done for `all'.
-17:48:17 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-make: Nothing to be done for `all'.
-17:48:50 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-make: Nothing to be done for `all'.
-17:49:25 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-Building file: ../src/Test.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-Finished building: ../src/Test.c
- 
-Building target: Test.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:        3208 B       512 KB      0.61%
-        RamLoc32:         492 B        32 KB      1.50%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
-   text	   data	    bss	    dec	    hex	filename
-   3200	      8	    484	   3692	    e6c	Test.axf
- 
-17:49:52 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-make: Nothing to be done for `all'.
-17:51:27 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-Building file: ../src/Test.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-../src/Test.c: In function 'main':
-../src/Test.c:30:9: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
-  printf(SystemCoreClock / 1000);
-         ^~~~~~~~~~~~~~~
-In file included from ../src/Test.c:18:0:
-c:\nxp\mcuxpressoide_10.1.1_606\ide\tools\redlib\include\stdio.h:135:12: note: expected 'const char * restrict' but argument is of type 'uint32_t {aka unsigned int}'
- extern int printf(const char * restrict format, ...);
-            ^~~~~~
-Finished building: ../src/Test.c
- 
-Building target: Test.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       11676 B       512 KB      2.23%
-        RamLoc32:         500 B        32 KB      1.53%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
-   text	   data	    bss	    dec	    hex	filename
-  11668	      8	    492	  12168	   2f88	Test.axf
- 
-17:51:56 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-Building file: ../src/Test.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-../src/Test.c: In function 'main':
-../src/Test.c:30:9: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
-  printf(SysTick_Config(SystemCoreClock / 1000));
-         ^~~~~~~~~~~~~~
-In file included from ../src/Test.c:18:0:
-c:\nxp\mcuxpressoide_10.1.1_606\ide\tools\redlib\include\stdio.h:135:12: note: expected 'const char * restrict' but argument is of type 'uint32_t {aka unsigned int}'
- extern int printf(const char * restrict format, ...);
-            ^~~~~~
-Finished building: ../src/Test.c
- 
-Building target: Test.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       11668 B       512 KB      2.23%
-        RamLoc32:         500 B        32 KB      1.53%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
-   text	   data	    bss	    dec	    hex	filename
-  11660	      8	    492	  12160	   2f80	Test.axf
- 
-17:53:16 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-Building file: ../src/Test.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-Finished building: ../src/Test.c
- 
-Building target: Test.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       11676 B       512 KB      2.23%
-        RamLoc32:         500 B        32 KB      1.53%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
-   text	   data	    bss	    dec	    hex	filename
-  11668	      8	    492	  12168	   2f88	Test.axf
- 
-17:54:57 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-Building file: ../src/Test.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-Finished building: ../src/Test.c
- 
-Building target: Test.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       11676 B       512 KB      2.23%
-        RamLoc32:         500 B        32 KB      1.53%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
-   text	   data	    bss	    dec	    hex	filename
-  11668	      8	    492	  12168	   2f88	Test.axf
- 
-17:55:13 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-Building file: ../src/Test.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-Finished building: ../src/Test.c
- 
-Building target: Test.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       11660 B       512 KB      2.22%
-        RamLoc32:         500 B        32 KB      1.53%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
-   text	   data	    bss	    dec	    hex	filename
-  11652	      8	    492	  12152	   2f78	Test.axf
- 
-17:55:46 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-Building file: ../src/Test.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-Finished building: ../src/Test.c
- 
-Building target: Test.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       11660 B       512 KB      2.22%
-        RamLoc32:         500 B        32 KB      1.53%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
-   text	   data	    bss	    dec	    hex	filename
-  11652	      8	    492	  12152	   2f78	Test.axf
- 
-17:56:04 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-Building file: ../src/Test.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-Finished building: ../src/Test.c
- 
-Building target: Test.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       11676 B       512 KB      2.23%
-        RamLoc32:         500 B        32 KB      1.53%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
-   text	   data	    bss	    dec	    hex	filename
-  11668	      8	    492	  12168	   2f88	Test.axf
- 
-17:57:49 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-make: Nothing to be done for `all'.
-18:01:35 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-Building file: ../src/Test.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-Finished building: ../src/Test.c
- 
-Building target: Test.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       11660 B       512 KB      2.22%
-        RamLoc32:         500 B        32 KB      1.53%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
-   text	   data	    bss	    dec	    hex	filename
-  11652	      8	    492	  12152	   2f78	Test.axf
- 
-18:02:52 **** Incremental Build of configuration Debug for project Test ****
-make -r -j8 all 
-Building file: ../src/Test.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Test\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -MT"src/Test.d" -o "src/Test.o" "../src/Test.c"
-Finished building: ../src/Test.c
- 
-Building target: Test.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf"  ./src/Test.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       11668 B       512 KB      2.23%
-        RamLoc32:         500 B        32 KB      1.53%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: Test.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "Test.axf"; # arm-none-eabi-objcopy -v -O binary "Test.axf" "Test.bin" ; # checksum -p LPC1769 -d "Test.bin";
-   text	   data	    bss	    dec	    hex	filename
-  11660	      8	    492	  12160	   2f80	Test.axf
- 

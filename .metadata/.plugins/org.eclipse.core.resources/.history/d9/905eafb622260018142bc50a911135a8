@@ -1,0 +1,26 @@
+#include "LPC17xx.h"
+#include "keypad.h"
+#include "led.h"
+
+void delay(int time);
+
+int layoutTest[] = {5,6,7,8,9,10,11,12,14,15,16,17,18};
+
+
+int main(){
+	LED_Init(22,0);
+	KEYPAD_Init(layoutTest);
+
+	int i;
+	int key;
+	while(1){
+		key = KEYPAD_Read();
+		for(i = 0; i < key; i++){
+			LPC_GPIO0->FIOSET = LED_PIN_ID;
+			Delay(250);
+			LPC_GPIO0->FIOCLR = LED_PIN_ID;
+			Delay(250);
+		}
+
+	}
+}

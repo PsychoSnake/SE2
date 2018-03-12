@@ -1,0 +1,43 @@
+18:25:47 **** Incremental Build of configuration Debug for project LPC1769 ****
+make -r all 
+Building file: ../src/KeyPad.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc" -I"C:\Users\PsychoSnake\Downloads\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/KeyPad.d" -MT"src/KeyPad.o" -MT"src/KeyPad.d" -o "src/KeyPad.o" "../src/KeyPad.c"
+In file included from ../src/KeyPad.c:2:0:
+C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
+ /** @defgroup GPIO_Public_Functions GPIO Public Functions
+  
+In file included from ../src/KeyPad.c:3:0:
+C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc/timer.h:33:1: warning: "/*" within comment [-Wcomment]
+ /** @defgroup TIMER_Public_Functions TIMER Public Functions
+  
+../src/KeyPad.c: In function 'KEYPAD_Read':
+../src/KeyPad.c:48:23: warning: implicit declaration of function 'convertToKey' [-Wimplicit-function-declaration]
+  return keyPad_Layout[convertToKey()];
+                       ^~~~~~~~~~~~
+../src/KeyPad.c: In function 'convertToKey':
+../src/KeyPad.c:56:6: warning: unused variable 'p' [-Wunused-variable]
+  int p = keyPad_Layout[value];
+      ^
+Finished building: ../src/KeyPad.c
+ 
+Building target: libLPC1769.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLPC1769.a"  ./src/GPIO.o ./src/KeyPad.o ./src/LCD.o ./src/SPI.o ./src/Timer.o ./src/lab5_font.o   
+c:\nxp\MCUXpressoIDE_10.1.1_606\ide\tools\bin\arm-none-eabi-ar.exe: creating libLPC1769.a
+Finished building target: libLPC1769.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libLPC1769.a" ; # arm-none-eabi-objdump -h -S "libLPC1769.a" >"libLPC1769.lss"
+   text	   data	    bss	    dec	    hex	filename
+    216	      0	      0	    216	     d8	GPIO.o (ex libLPC1769.a)
+    340	     32	     12	    384	    180	KeyPad.o (ex libLPC1769.a)
+   1210	      8	     20	   1238	    4d6	LCD.o (ex libLPC1769.a)
+    244	      0	      0	    244	     f4	SPI.o (ex libLPC1769.a)
+    138	      0	      0	    138	     8a	Timer.o (ex libLPC1769.a)
+   1552	      0	      0	   1552	    610	lab5_font.o (ex libLPC1769.a)
+ 
+
+18:25:48 Build Finished (took 1s.329ms)
+

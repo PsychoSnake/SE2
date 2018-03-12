@@ -29,7 +29,7 @@ all: Test.axf
 Test.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Downloads\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="Test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Test_Debug.ld" -o "Test.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
