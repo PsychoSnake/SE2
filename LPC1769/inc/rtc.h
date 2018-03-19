@@ -25,7 +25,16 @@
 #ifndef _RTC_H_
 #define _RTC_H_
 
-#include "lpc2106.h"
+struct tm {
+	int tm_sec; /*!< Offset: 0x00 seconds */
+  	int tm_min; /*!< Offset: 0x04 minutes */
+	int tm_hour; /*!< Offset: 0x08 hours */
+	int tm_wday; /*!< Offset: 0x0c Memory Accelerator Module Control Register */
+	int tm_mday; /*!< Offset: 0x10 Memory Accelerator Module Control Register */
+	int tm_yday; /*!< Offset: 0x14 Memory Accelerator Module Control Register */
+	int	tm_mon; /*!< Offset: 0x18 Memory Accelerator Module Control Register */
+	int tm_year; /*!< Offset: 0x1c Memory Accelerator Module Control Register */
+};
 
 /** @defgroup RTC RTC
  * @ingroup RTC

@@ -6,8 +6,8 @@
 
 void TIMER0_Init(unsigned int frequency){
 	LPC_TIM0->TCR = TIMER_OFF;
-	//LPC_PINVPBDIV->VPB_RATE = 1;
-	LPC_TIM0->PR = ((SystemCoreClock / frequency) - 1) / 1000;
+	LPC_SC->PCLKSEL0 = 1 << 2;
+	LPC_TIM0->PR = (((SystemCoreClock / frequency)) / 1000) - 1;
 	LPC_TIM0->MCR = 0;
 	LPC_TIM0->EMR = 0;
 	LPC_TIM0->CTCR = 0;

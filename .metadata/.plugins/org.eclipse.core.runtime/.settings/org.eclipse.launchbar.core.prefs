@@ -1,6 +1,6 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Test LinkServer Release,org.eclipse.launchbar.core.descriptorType.default\:TestLCD LinkServer Release,org.eclipse.launchbar.core.descriptorType.default\:Test LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:TestLCD LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:TestKeyPad LinkServer Release,org.eclipse.launchbar.core.descriptorType.default\:TestKeyPad LinkServer Debug
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Test LinkServer Release,org.eclipse.launchbar.core.descriptorType.default\:TestLCD LinkServer Release,org.eclipse.launchbar.core.descriptorType.default\:Test LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:TestLCD LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:TestKeyPad LinkServer Release (1),org.eclipse.launchbar.core.descriptorType.default\:Project_SE1 LinkServer Release,org.eclipse.launchbar.core.descriptorType.default\:Project_SE1 LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:TestKeyPad LinkServer Debug (1)
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:Test\ LinkServer\ Debug/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:Test\ LinkServer\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

@@ -1,0 +1,29 @@
+16:11:32 **** Incremental Build of configuration Debug for project TestKey ****
+make -r -j8 all 
+Building target: TestKey.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\CMSIS_CORE_LPC17xx\Debug" -L"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\Debug" -Xlinker -Map="TestKey.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "TestKey_Debug.ld" -o "TestKey.axf"  ./src/KeyPad_Test.o ./src/cr_startup_lpc175x_6x.o   -lCMSIS_CORE_LPC17xx -lLPC1769
+Memory region         Used Size  Region Size  %age Used
+       MFlash512:       11160 B       512 KB      2.13%
+        RamLoc32:         112 B        32 KB      0.34%
+c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(fpprintf.o): In function `printf':
+fpprintf.c:(.text.printf+0x38): undefined reference to `__sys_write'
+fpprintf.c:(.text.printf+0x50): undefined reference to `__Ciob'
+c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(_deferredlazyseek.o): In function `__flsbuf':
+_deferredlazyseek.c:(.text.__flsbuf+0x94): undefined reference to `__sys_istty'
+c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(_writebuf.o): In function `_Cwritebuf':
+_writebuf.c:(.text._Cwritebuf+0x14): undefined reference to `__sys_flen'
+_writebuf.c:(.text._Cwritebuf+0x28): undefined reference to `__sys_seek'
+_writebuf.c:(.text._Cwritebuf+0x4e): undefined reference to `__sys_write'
+        RamAHB32:          0 GB        32 KB      0.00%
+c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(alloc.o): In function `_Csys_alloc':
+alloc.c:(.text._Csys_alloc+0xe): undefined reference to `__sys_write'
+alloc.c:(.text._Csys_alloc+0x12): undefined reference to `__sys_appexit'
+c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(fseek.o): In function `fseek':
+fseek.c:(.text.fseek+0x1c): undefined reference to `__sys_istty'
+fseek.c:(.text.fseek+0x92): undefined reference to `__sys_flen'
+collect2.exe: error: ld returned 1 exit status
+make: *** [TestKey.axf] Error 1
+
+16:11:32 Build Finished (took 454ms)
+

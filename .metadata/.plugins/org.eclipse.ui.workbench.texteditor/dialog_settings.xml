@@ -6,17 +6,23 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="TIMER0_Init(1);" key="selection"/>
+		<item value="SEL0" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="TIMER0_Init(1);"/>
-			<item value="SysTickConfig"/>
-			<item value="SysTick"/>
+			<item value="SEL0"/>
+			<item value="SEL"/>
+			<item value="PCLKS"/>
+			<item value="PC"/>
+			<item value="P"/>
+			<item value="RTC"/>
+			<item value="event"/>
+			<item value="sector"/>
 		</list>
 		<list key="replacehistory">
+			<item value="LPC_RTC"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

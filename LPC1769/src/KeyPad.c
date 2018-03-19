@@ -11,6 +11,7 @@
 #define C2 (1 << 25)
 
 #define KEYPAD_OUTPUT_MASK_LENGTH 4
+#define COLLUNM_SHIFT 23
 
 int *keyPad_Layout;
 int collumnVal;
@@ -31,7 +32,7 @@ int KEYPAD_Hit(void){
 	for(i = 0; i < KEYPAD_OUTPUT_MASK_LENGTH; i++){
 		GPIO_SetIOPin(keyPad_Output_Mask_Set[i], 1);
 		GPIO_SetIOPin(keyPad_Output_Mask_Clr[i], 0);
-		if(( collumnVal = ( GPIO_GetIOPin(C0|C1|C2) >> 8 ) ) < 7){
+		if(( collumnVal = ( GPIO_GetIOPin(C0|C1|C2) >> COLLUNM_SHIFT ) ) < 7){
 			lineVal = i;
 			return 1;
 		}
@@ -40,17 +41,14 @@ int KEYPAD_Hit(void){
 }
 
 int KEYPAD_Read(void){
-	int time = TIMER0_GetValue();
-	while(KEYPAD_Hit() == 0){
-		if(TIMER0_Elapse(time) < 1000)
-			return -1;
-	}
+		while(KEYPAD_Hit() == 0){
+		}
 	return keyPad_Layout[convertToKey()];
 }
 
 int convertToKey(){
 	if(collumnVal == 2){
-		return 12;
+		return 21;
 	}
 	int value = lineVal * 3 + ( ( ~collumnVal & 7 ) >> 1) ; // 3 * 3 + (5 >> 1)
 	int p = keyPad_Layout[value];

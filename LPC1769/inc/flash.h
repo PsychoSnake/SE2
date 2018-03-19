@@ -25,7 +25,7 @@
 #ifndef _FLASH_H_
 #define _FLASH_H_
 
-#include "lpc2106.h"
+#include "stdint.h"
 
 /** @defgroup FLASH FLASH
  * @ingroup FLASH

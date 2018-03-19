@@ -25,8 +25,6 @@
 #ifndef _STUB_H_
 #define _STUB_H_
 
-#include "lpc2106.h"
-
 /** @defgroup STUB STUB
  * @ingroup STUB
  * This package provides a function to be used for IAP

@@ -1,6 +1,6 @@
-18:28:36 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+18:19:36 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for `all'.
 
-18:28:36 Build Finished (took 156ms)
+18:19:36 Build Finished (took 126ms)
 
