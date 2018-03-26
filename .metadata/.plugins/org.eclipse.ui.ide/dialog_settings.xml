@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx"/>
 		<item value="C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\CMSIS_CORE_LPC17xx"/>
 		<item value="C:\Users\PsychoSnake\Downloads\CMSIS_CORE_LPC17xx"/>
 		<item value="C:\Users\PsychoSnake\Downloads\CMSIS_CORE_LPC17xx.zip"/>

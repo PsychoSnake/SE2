@@ -1,6 +1,185 @@
-17:50:50 **** Incremental Build of configuration Debug for project Project_SE1 ****
-make -r -j8 all 
-make: Nothing to be done for `all'.
+16:08:35 **** Build of configuration Debug for project Project_SE1 ****
+make -r -j4 all 
+Building file: ../src/play_module/Play.c
+Building file: ../src/config_module/Config.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/play_module/Play.d" -MT"src/play_module/Play.o" -MT"src/play_module/Play.d" -o "src/play_module/Play.o" "../src/play_module/Play.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/config_module/Config.d" -MT"src/config_module/Config.o" -MT"src/config_module/Config.d" -o "src/config_module/Config.o" "../src/config_module/Config.c"
+Building file: ../src/Utils/EventManager.c
+Building file: ../src/Utils/Storage.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Utils/EventManager.d" -MT"src/Utils/EventManager.o" -MT"src/Utils/EventManager.d" -o "src/Utils/EventManager.o" "../src/Utils/EventManager.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Utils/Storage.d" -MT"src/Utils/Storage.o" -MT"src/Utils/Storage.d" -o "src/Utils/Storage.o" "../src/Utils/Storage.c"
+../src/play_module/Play.c: In function 'startGame':
+../src/play_module/Play.c:63:2: warning: implicit declaration of function 'UI_ClearScreen' [-Wimplicit-function-declaration]
+  UI_ClearScreen();
+  ^~~~~~~~~~~~~~
+../src/play_module/Play.c:64:2: warning: implicit declaration of function 'UI_DrawGameGrid' [-Wimplicit-function-declaration]
+  UI_DrawGameGrid(&dateTime);
+  ^~~~~~~~~~~~~~~
+../src/play_module/Play.c:68:7: warning: implicit declaration of function 'UI_DrawPlayerTurn' [-Wimplicit-function-declaration]
+       UI_DrawPlayerTurn(player, 0);
+       ^~~~~~~~~~~~~~~~~
+../src/play_module/Play.c:71:11: warning: implicit declaration of function 'EVENT_GetEvent' [-Wimplicit-function-declaration]
+   event = EVENT_GetEvent();
+           ^~~~~~~~~~~~~~
+../src/play_module/Play.c:135:6: warning: implicit declaration of function 'UI_Write' [-Wimplicit-function-declaration]
+      UI_Write(mark, x, y);
+      ^~~~~~~~
+../src/play_module/Play.c:145:3: warning: implicit declaration of function 'TIME_Wait' [-Wimplicit-function-declaration]
+   TIME_Wait(1000);
+   ^~~~~~~~~
+../src/play_module/Play.c:146:2: warning: implicit declaration of function 'UI_PlayResultScreen' [-Wimplicit-function-declaration]
+  UI_PlayResultScreen(gameState, player);
+  ^~~~~~~~~~~~~~~~~~~
+../src/Utils/EventManager.c: In function 'EVENT_Init':
+../src/Utils/EventManager.c:10:3: warning: implicit declaration of function 'KEYPAD_Init' [-Wimplicit-function-declaration]
+   KEYPAD_Init(key_layout);
+   ^~~~~~~~~~~
+../src/Utils/EventManager.c: In function 'EVENT_GetIdleEvent':
+../src/Utils/EventManager.c:14:3: warning: implicit declaration of function 'TIME_Wait' [-Wimplicit-function-declaration]
+   TIME_Wait(400);
+   ^~~~~~~~~
+../src/Utils/EventManager.c:15:13: warning: implicit declaration of function 'KEYPAD_Read' [-Wimplicit-function-declaration]
+   int key = KEYPAD_Read();
+             ^~~~~~~~~~~
+../src/Utils/EventManager.c:17:12: warning: implicit declaration of function 'TIMER0_GetValue' [-Wimplicit-function-declaration]
+     time = TIMER0_GetValue();
+            ^~~~~~~~~~~~~~~
+../src/Utils/EventManager.c:19:34: warning: implicit declaration of function 'TIMER0_Elapse' [-Wimplicit-function-declaration]
+     if(lastKey == IDLE_CONFIG && TIMER0_Elapse(time) > 2000){
+                                  ^~~~~~~~~~~~~
+At top level:
+../src/Utils/EventManager.c:7:12: warning: 'waitBeforeKeyTime' defined but not used [-Wunused-variable]
+ static int waitBeforeKeyTime = 0;
+            ^~~~~~~~~~~~~~~~~
+../src/config_module/Config.c: In function 'configureClock':
+../src/config_module/Config.c:13:3: warning: implicit declaration of function 'UI_ClearScreen' [-Wimplicit-function-declaration]
+   UI_ClearScreen();
+   ^~~~~~~~~~~~~~
+../src/config_module/Config.c:15:5: warning: implicit declaration of function 'UI_DrawConfigClock' [-Wimplicit-function-declaration]
+     UI_DrawConfigClock(&dateTime, state);
+     ^~~~~~~~~~~~~~~~~~
+../src/config_module/Config.c: In function 'configureDate':
+../src/config_module/Config.c:68:5: warning: implicit declaration of function 'UI_DrawConfigDate' [-Wimplicit-function-declaration]
+     UI_DrawConfigDate(&dateTime, state);
+     ^~~~~~~~~~~~~~~~~
+../src/config_module/Config.c: In function 'deleteResults':
+../src/config_module/Config.c:119:3: warning: implicit declaration of function 'UI_DrawConfigDeleteResults' [-Wimplicit-function-declaration]
+   UI_DrawConfigDeleteResults();
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/config_module/Config.c: In function 'CONFIG_StartConfiguration':
+../src/config_module/Config.c:135:5: warning: implicit declaration of function 'UI_DrawMainConfigScreen' [-Wimplicit-function-declaration]
+     UI_DrawMainConfigScreen();
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/config_module/Config.c:151:9: warning: implicit declaration of function 'TIME_SetDateTime' [-Wimplicit-function-declaration]
+         TIME_SetDateTime(&dateTime);
+         ^~~~~~~~~~~~~~~~
+Finished building: ../src/play_module/Play.c
+Finished building: ../src/config_module/Config.c
+Finished building: ../src/Utils/Storage.c
+Finished building: ../src/Utils/EventManager.c
+ 
+ 
+ 
+ 
+Building file: ../src/Utils/TimeManager.c
+Building file: ../src/Utils/UI_Manager.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Utils/TimeManager.d" -MT"src/Utils/TimeManager.o" -MT"src/Utils/TimeManager.d" -o "src/Utils/TimeManager.o" "../src/Utils/TimeManager.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Utils/UI_Manager.d" -MT"src/Utils/UI_Manager.o" -MT"src/Utils/UI_Manager.d" -o "src/Utils/UI_Manager.o" "../src/Utils/UI_Manager.c"
+Building file: ../src/App.c
+Building file: ../src/cr_startup_lpc175x_6x.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/App.d" -MT"src/App.o" -MT"src/App.d" -o "src/App.o" "../src/App.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc175x_6x.d" -MT"src/cr_startup_lpc175x_6x.o" -MT"src/cr_startup_lpc175x_6x.d" -o "src/cr_startup_lpc175x_6x.o" "../src/cr_startup_lpc175x_6x.c"
+../src/Utils/TimeManager.c: In function 'TIME_Init':
+../src/Utils/TimeManager.c:6:3: warning: implicit declaration of function 'TIMER0_Init' [-Wimplicit-function-declaration]
+   TIMER0_Init(timerFreq);
+   ^~~~~~~~~~~
+../src/Utils/TimeManager.c: In function 'TIME_Wait':
+../src/Utils/TimeManager.c:20:14: warning: implicit declaration of function 'TIMER0_GetValue' [-Wimplicit-function-declaration]
+   int time = TIMER0_GetValue();
+              ^~~~~~~~~~~~~~~
+../src/Utils/TimeManager.c:21:9: warning: implicit declaration of function 'TIMER0_Elapse' [-Wimplicit-function-declaration]
+   while(TIMER0_Elapse(time) < waitTime);
+         ^~~~~~~~~~~~~
+../src/App.c: In function 'main':
+../src/App.c:21:14: warning: implicit declaration of function 'TIME_GetDateTime' [-Wimplicit-function-declaration]
+   dateTime = TIME_GetDateTime();
+              ^~~~~~~~~~~~~~~~
+../src/App.c:21:12: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   dateTime = TIME_GetDateTime();
+            ^
+../src/App.c:23:3: warning: implicit declaration of function 'UI_DrawIdleScreen' [-Wimplicit-function-declaration]
+   UI_DrawIdleScreen(dateTime, &players);
+   ^~~~~~~~~~~~~~~~~
+../src/App.c:28:5: warning: implicit declaration of function 'CONFIG_StartConfiguration' [-Wimplicit-function-declaration]
+     CONFIG_StartConfiguration();
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/App.c:31:5: warning: implicit declaration of function 'startGame' [-Wimplicit-function-declaration]
+     startGame(&players);
+     ^~~~~~~~~
+../src/App.c: In function 'initialize':
+../src/App.c:38:2: warning: implicit declaration of function 'SystemCoreClockUpdate' [-Wimplicit-function-declaration]
+  SystemCoreClockUpdate();
+  ^~~~~~~~~~~~~~~~~~~~~
+../src/App.c:43:2: warning: implicit declaration of function 'TIME_Init' [-Wimplicit-function-declaration]
+  TIME_Init(TIMER_FREQUENCY);
+  ^~~~~~~~~
+../src/App.c:44:2: warning: implicit declaration of function 'UI_SetupLCD' [-Wimplicit-function-declaration]
+  UI_SetupLCD();
+  ^~~~~~~~~~~
+../src/Utils/UI_Manager.c: In function 'UI_SetupLCD':
+../src/Utils/UI_Manager.c:28:2: warning: implicit declaration of function 'SPI_BeginTransfer' [-Wimplicit-function-declaration]
+  SPI_BeginTransfer(LCD_CS);
+  ^~~~~~~~~~~~~~~~~
+../src/Utils/UI_Manager.c:30:2: warning: implicit declaration of function 'SPI_EndTransfer' [-Wimplicit-function-declaration]
+  SPI_EndTransfer(LCD_CS);
+  ^~~~~~~~~~~~~~~
+../src/Utils/UI_Manager.c: In function 'UI_DrawPlayerTurn':
+../src/Utils/UI_Manager.c:225:6: warning: type of 'player' defaults to 'int' [-Wimplicit-int]
+ void UI_DrawPlayerTurn(player, invalidPlay){
+      ^~~~~~~~~~~~~~~~~
+../src/Utils/UI_Manager.c:225:6: warning: type of 'invalidPlay' defaults to 'int' [-Wimplicit-int]
+../src/Utils/UI_Manager.c:234:5: warning: implicit declaration of function 'TIME_Wait' [-Wimplicit-function-declaration]
+     TIME_Wait(1000);
+     ^~~~~~~~~
+../src/Utils/UI_Manager.c:227:7: warning: unused variable 'time' [-Wunused-variable]
+   int time;
+       ^~~~
+Finished building: ../src/Utils/TimeManager.c
+Finished building: ../src/App.c
+ 
+ 
+Finished building: ../src/Utils/UI_Manager.c
+Finished building: ../src/cr_startup_lpc175x_6x.c
+ 
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building target: Project_SE1.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\Debug" -Xlinker -Map="Project_SE1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Project_SE1_Debug.ld" -o "Project_SE1.axf"  ./src/play_module/Play.o  ./src/config_module/Config.o  ./src/Utils/EventManager.o ./src/Utils/Storage.o ./src/Utils/TimeManager.o ./src/Utils/UI_Manager.o  ./src/App.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx -lLPC1769
+Memory region         Used Size  Region Size  %age Used
+       MFlash512:       11428 B       512 KB      2.18%
+        RamLoc32:         700 B        32 KB      2.14%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: Project_SE1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Project_SE1.axf"; # arm-none-eabi-objcopy -v -O binary "Project_SE1.axf" "Project_SE1.bin" ; # checksum -p LPC1769 -d "Project_SE1.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11268	    160	    540	  11968	   2ec0	Project_SE1.axf
+ 
 
-17:50:50 Build Finished (took 140ms)
+16:08:43 Build Finished (took 8s.289ms)
 

@@ -1,8 +1,8 @@
-18:19:15 **** Build of configuration Debug for project LPC1769 ****
+16:08:06 **** Build of configuration Debug for project LPC1769 ****
 make -r all 
 Building file: ../src/Flash.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Flash.d" -MT"src/Flash.o" -MT"src/Flash.d" -o "src/Flash.o" "../src/Flash.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Flash.d" -MT"src/Flash.o" -MT"src/Flash.d" -o "src/Flash.o" "../src/Flash.c"
 ../src/Flash.c: In function 'FLASH_WriteData':
 ../src/Flash.c:26:17: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
   iap_command[1] = dstAddr;
@@ -14,18 +14,18 @@ Finished building: ../src/Flash.c
  
 Building file: ../src/GPIO.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/GPIO.d" -MT"src/GPIO.o" -MT"src/GPIO.d" -o "src/GPIO.o" "../src/GPIO.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/GPIO.d" -MT"src/GPIO.o" -MT"src/GPIO.d" -o "src/GPIO.o" "../src/GPIO.c"
 Finished building: ../src/GPIO.c
  
 Building file: ../src/KeyPad.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/KeyPad.d" -MT"src/KeyPad.o" -MT"src/KeyPad.d" -o "src/KeyPad.o" "../src/KeyPad.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/KeyPad.d" -MT"src/KeyPad.o" -MT"src/KeyPad.d" -o "src/KeyPad.o" "../src/KeyPad.c"
 In file included from ../src/KeyPad.c:2:0:
-C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
+C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup GPIO_Public_Functions GPIO Public Functions
   
 In file included from ../src/KeyPad.c:3:0:
-C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc/timer.h:33:1: warning: "/*" within comment [-Wcomment]
+C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/timer.h:33:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup TIMER_Public_Functions TIMER Public Functions
   
 ../src/KeyPad.c: In function 'KEYPAD_Read':
@@ -40,13 +40,13 @@ Finished building: ../src/KeyPad.c
  
 Building file: ../src/LCD.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -MT"src/LCD.d" -o "src/LCD.o" "../src/LCD.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -MT"src/LCD.d" -o "src/LCD.o" "../src/LCD.c"
 In file included from ../src/LCD.c:2:0:
-C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
+C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup GPIO_Public_Functions GPIO Public Functions
   
 In file included from ../src/LCD.c:3:0:
-C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc/timer.h:33:1: warning: "/*" within comment [-Wcomment]
+C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/timer.h:33:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup TIMER_Public_Functions TIMER Public Functions
   
 ../src/LCD.c: In function 'LCD_Init':
@@ -95,14 +95,14 @@ Finished building: ../src/LCD.c
  
 Building file: ../src/RTC.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/RTC.d" -MT"src/RTC.o" -MT"src/RTC.d" -o "src/RTC.o" "../src/RTC.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/RTC.d" -MT"src/RTC.o" -MT"src/RTC.d" -o "src/RTC.o" "../src/RTC.c"
 Finished building: ../src/RTC.c
  
 Building file: ../src/SPI.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/SPI.d" -MT"src/SPI.o" -MT"src/SPI.d" -o "src/SPI.o" "../src/SPI.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/SPI.d" -MT"src/SPI.o" -MT"src/SPI.d" -o "src/SPI.o" "../src/SPI.c"
 In file included from ../src/SPI.c:2:0:
-C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
+C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup GPIO_Public_Functions GPIO Public Functions
   
 ../src/SPI.c: In function 'SPI_Init':
@@ -120,16 +120,16 @@ Finished building: ../src/SPI.c
  
 Building file: ../src/Timer.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Timer.d" -MT"src/Timer.o" -MT"src/Timer.d" -o "src/Timer.o" "../src/Timer.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Timer.d" -MT"src/Timer.o" -MT"src/Timer.d" -o "src/Timer.o" "../src/Timer.c"
 In file included from ../src/Timer.c:2:0:
-C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc/timer.h:33:1: warning: "/*" within comment [-Wcomment]
+C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/timer.h:33:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup TIMER_Public_Functions TIMER Public Functions
   
 Finished building: ../src/Timer.c
  
 Building file: ../src/lab5_font.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\LPC1769\inc" -I"C:\Users\PsychoSnake\Documents\Informatica\ISEL\6_Semestre\SE2\Code\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lab5_font.d" -MT"src/lab5_font.o" -MT"src/lab5_font.d" -o "src/lab5_font.o" "../src/lab5_font.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lab5_font.d" -MT"src/lab5_font.o" -MT"src/lab5_font.d" -o "src/lab5_font.o" "../src/lab5_font.c"
 ../src/lab5_font.c:22:40: warning: missing braces around initializer [-Wmissing-braces]
  const unsigned char font8x16[97][16] = {
                                         ^
@@ -156,5 +156,5 @@ arm-none-eabi-size "libLPC1769.a" ; # arm-none-eabi-objdump -h -S "libLPC1769.a"
    1552	      0	      0	   1552	    610	lab5_font.o (ex libLPC1769.a)
  
 
-18:19:21 Build Finished (took 6s.364ms)
+16:08:17 Build Finished (took 11s.761ms)
 
