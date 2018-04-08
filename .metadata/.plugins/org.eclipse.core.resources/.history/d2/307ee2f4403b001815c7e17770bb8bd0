@@ -1,7 +1,7 @@
 #include "LPC17xx.h"
 #include "I2C.h"
 
-char Rdbuffer [I2C_BUFFER_SIZE];
+
 char Wrbuffer [I2C_BUFFER_SIZE];
 int WrLength;
 int RdLength;
@@ -141,8 +141,7 @@ void I2C_Init(){
 }
 
 void I2C_Start(){
-	 /*--- Issue a start condition ---*/
-	  LPC_I2C1->I2CONSET = I2CONSET_STA;	/* Set Start flag */
+
 }
 
 void I2C_End();

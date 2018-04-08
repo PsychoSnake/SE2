@@ -36,6 +36,9 @@
 		<list key="ENABLED_TRANSFERS">
 		</list>
 	</section>
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item value="C:\Faculdade\6_Semestre\PS\repositorio\intelligent_garbage_collecting\Embedded_System\codigo" key="OUTSIDE_LOCATION"/>
+	</section>
 	<section name="NewWizardAction">
 	</section>
 	<section name="ChooseWorkspaceDialogSettings">

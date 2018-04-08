@@ -142,7 +142,7 @@ void I2C_Init(){
 
 void I2C_Start(){
 	 /*--- Issue a start condition ---*/
-	  LPC_I2C1->I2CONSET = I2CONSET_STA;	/* Set Start flag */
+	  LPC_I2C1->CONSET = I2CONSET_STA;	/* Set Start flag */
 }
 
 void I2C_End();

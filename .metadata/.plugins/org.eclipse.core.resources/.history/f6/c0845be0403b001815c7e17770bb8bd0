@@ -1,7 +1,7 @@
 #include "LPC17xx.h"
 #include "I2C.h"
 
-char Rdbuffer [I2C_BUFFER_SIZE];
+
 char Wrbuffer [I2C_BUFFER_SIZE];
 int WrLength;
 int RdLength;
@@ -13,7 +13,7 @@ void I2C1_IRQHandler(void)
 {
   uint8_t StatValue;
 
-  StatValue = LPC_I2C1->I2STAT;
+  StatValue = LPC_I2C1->STAT;
   switch ( StatValue )
   {
 	case 0x08:			/* A Start condition is issued. */
@@ -83,7 +83,7 @@ void I2C1_IRQHandler(void)
 	break;
 
 	case 0x50:	/* Data byte has been received, regardless following ACK or NACK */
-	Rdbuffer[RdIndex++] = LPC_I2C1->I2DAT;
+	Rdbuffer[RdIndex1++] = LPC_I2C1->I2DAT;
 	if ( (RdIndex + 1) < RdLength )
 	{
 	  LPC_I2C1->I2CONSET = I2CONSET_AA;	/* assert ACK after data is received */
@@ -141,8 +141,7 @@ void I2C_Init(){
 }
 
 void I2C_Start(){
-	 /*--- Issue a start condition ---*/
-	  LPC_I2C1->I2CONSET = I2CONSET_STA;	/* Set Start flag */
+
 }
 
 void I2C_End();
