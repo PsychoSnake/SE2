@@ -51,7 +51,7 @@ void incrementResults(int gameState,int player, struct players_info *players){
       }
       break;
   }
-  //STORAGE_StoreGameResults(players);
+  STORAGE_StoreGameResults(players);
 }
 
 void startGame(struct players_info *players){

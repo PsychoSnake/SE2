@@ -1,0 +1,42 @@
+/*
+===============================================================================
+ Name        : TestEeprom.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#endif
+
+#include <cr_section_macros.h>
+#include "eeprom.h"
+
+#include <stdio.h>
+
+// TODO: insert other include files here
+
+// TODO: insert other definitions and declarations here
+
+int main(void) {
+
+
+    char * test = "Hello World";
+
+    printf("%d", sizeof(test));
+
+    EEPROM_Write(test, 11);
+
+    char read [11];
+
+    while(state != 12);
+
+    EEPROM_Read(read, 11);
+
+    printf("Read: %s", read);
+
+    return 0 ;
+}

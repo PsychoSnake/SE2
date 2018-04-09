@@ -32,6 +32,7 @@
 #define I2CONCLR_SIC        (0x1<<3)
 #define I2CONCLR_STAC       (0x1<<5)
 #define I2CONCLR_I2ENC      (0x1<<6)
+#define I2CONCLR_STOP       (0x1<<4)
 
 
 

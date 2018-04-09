@@ -1,6 +1,7 @@
 #include "storage.h"
 #include "event.h"
 #include "rtc.h"
+#include "eeprom.h"
 
 #define CONFIG_EVENT 21
 #define PLAY_EVENT 10
@@ -19,7 +20,7 @@ int main(){
 	struct tm *dateTime;
 	while(1){
 		dateTime = TIME_GetDateTime();
-		//STORAGE_LoadGameResults(&players);
+		STORAGE_LoadGameResults(&players);
 		UI_DrawIdleScreen(dateTime, &players);
 		event = EVENT_GetIdleEvent();
 
@@ -41,5 +42,6 @@ void initialize(){
 	//LED_Init(LED_PIN, 0);
 	EVENT_Init();
 	TIME_Init(TIMER_FREQUENCY);
-	UI_SetupLCD();
+	UI_SetupLCD();~
+	EEPROM_Init();
 }

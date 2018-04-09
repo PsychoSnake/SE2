@@ -7,7 +7,7 @@ int WrLength;
 int RdLength;
 int state;
 static int WrIndex;
-static int RdIndex;
+int RdIndex;
 
 void I2C1_IRQHandler(void)
 {
@@ -18,6 +18,7 @@ void I2C1_IRQHandler(void)
   {
 	case 0x08:			/* A Start condition is issued. */
 	WrIndex = 0;
+	RdIndex = 0;
 	LPC_I2C1->I2DAT = Wrbuffer[WrIndex++];
 	LPC_I2C1->I2CONCLR = (I2CONCLR_SIC | I2CONCLR_STAC);
 	break;
@@ -126,23 +127,26 @@ void I2C_Init(){
 	LPC_SC->PCLKSEL1 |= 1 << 6;
 
 	LPC_PINCON->PINSEL0 |= 1 | 1<<1 | 1<<2 | 1<<3;
-	LPC_PINCON->PINMODE0 &= ~((1)|(1<<2));
+	LPC_PINCON->PINMODE0 &= ~((1)|(1<<2)|(1<<3)|(1<<4));
 	LPC_PINCON->PINMODE0 |= 1 << 1 | 1 << 3;
-	LPC_PINCON->PINMODE_OD0 |= 1 | 1 << 1;
+	LPC_PINCON->PINMODE_OD0 |= 1 | (1 << 1);
 
 	LPC_I2C1->I2SCLH = I2C_CLOCK_HIGH;
 	LPC_I2C1->I2SCLL = I2C_CLOCK_LOW;
 
-	LPC_I2C1->I2CONCLR = I2CONCLR_AAC | I2CONCLR_I2ENC | I2CONCLR_SIC | I2CONCLR_STAC;
+	LPC_I2C1->I2CONCLR = I2CONCLR_AAC | I2CONCLR_I2ENC | I2CONCLR_SIC | I2CONCLR_STAC | I2CONCLR_STOP;
 
-	NVIC_EnableIRQ(I2C2_IRQn);
+	NVIC_EnableIRQ(I2C1_IRQn);
 
 	LPC_I2C1->I2CONSET = I2CONSET_ENABLE;
+
 }
 
 void I2C_Start(){
-	 /*--- Issue a start condition ---*/
-	  LPC_I2C1->I2CONSET = I2CONSET_STA;	/* Set Start flag */
+
+	  LPC_I2C1->I2CONSET = I2CONSET_STA;
+
+	  state = I2C_STARTED;
 }
 
 void I2C_End();

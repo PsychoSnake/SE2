@@ -1,0 +1,6 @@
+20:02:04 **** Incremental Build of configuration Debug for project TestEeprom ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+
+20:02:04 Build Finished (took 125ms)
+
