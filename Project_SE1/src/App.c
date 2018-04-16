@@ -42,6 +42,6 @@ void initialize(){
 	//LED_Init(LED_PIN, 0);
 	EVENT_Init();
 	TIME_Init(TIMER_FREQUENCY);
-	UI_SetupLCD();~
+	UI_SetupLCD();
 	EEPROM_Init();
 }

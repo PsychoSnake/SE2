@@ -6,3 +6,4 @@ org.eclipse.launchbar.core.descriptorType.default\:Project_SE1\ LinkServer\ Debu
 org.eclipse.launchbar.core.descriptorType.default\:Project_SE1\ LinkServer\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Test\ LinkServer\ Debug/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:Test\ LinkServer\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:TestEeprom\ LinkServer\ Debug/activeLaunchMode=debug

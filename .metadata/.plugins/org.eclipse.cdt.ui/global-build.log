@@ -1,302 +1,49 @@
-19:59:28 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+18:27:48 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for `all'.
-19:59:30 **** Incremental Build of configuration Debug for project LPC1769 ****
+18:27:48 **** Incremental Build of configuration Debug for project LPC1769 ****
 make -r all 
-Building file: ../src/I2C.c
+Building file: ../src/Ethernet.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/I2C.d" -MT"src/I2C.o" -MT"src/I2C.d" -o "src/I2C.o" "../src/I2C.c"
-Finished building: ../src/I2C.c
- 
-Building target: libLPC1769.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libLPC1769.a"  ./src/Flash.o ./src/GPIO.o ./src/I2C.o ./src/KeyPad.o ./src/LCD.o ./src/RTC.o ./src/SPI.o ./src/Timer.o ./src/eeprom.o ./src/lab5_font.o ./src/storage.o   
-c:\nxp\MCUXpressoIDE_10.1.1_606\ide\tools\bin\arm-none-eabi-ar.exe: creating libLPC1769.a
-Finished building target: libLPC1769.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libLPC1769.a" ; # arm-none-eabi-objdump -h -S "libLPC1769.a" >"libLPC1769.lss"
-   text	   data	    bss	    dec	    hex	filename
-    234	      0	      0	    234	     ea	Flash.o (ex libLPC1769.a)
-    216	      0	      0	    216	     d8	GPIO.o (ex libLPC1769.a)
-    988	      0	    148	   1136	    470	I2C.o (ex libLPC1769.a)
-    304	     32	     12	    348	    15c	KeyPad.o (ex libLPC1769.a)
-   1210	      8	     20	   1238	    4d6	LCD.o (ex libLPC1769.a)
-    432	      0	      0	    432	    1b0	RTC.o (ex libLPC1769.a)
-    252	      0	      0	    252	     fc	SPI.o (ex libLPC1769.a)
-    158	      0	      0	    158	     9e	Timer.o (ex libLPC1769.a)
-    284	      0	      0	    284	    11c	eeprom.o (ex libLPC1769.a)
-   1552	      0	      0	   1552	    610	lab5_font.o (ex libLPC1769.a)
-     80	      0	      0	     80	     50	storage.o (ex libLPC1769.a)
- 
-19:59:43 **** Clean-only build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r clean 
-rm -rf  ./src/system_LPC17xx.o  ./src/system_LPC17xx.d  libCMSIS_CORE_LPC17xx.a
- 
-19:59:43 **** Clean-only build of configuration Debug for project LPC1769 ****
-make -r clean 
-rm -rf  ./src/Flash.o ./src/GPIO.o ./src/I2C.o ./src/KeyPad.o ./src/LCD.o ./src/RTC.o ./src/SPI.o ./src/Timer.o ./src/eeprom.o ./src/lab5_font.o ./src/storage.o  ./src/Flash.d ./src/GPIO.d ./src/I2C.d ./src/KeyPad.d ./src/LCD.d ./src/RTC.d ./src/SPI.d ./src/Timer.d ./src/eeprom.d ./src/lab5_font.d ./src/storage.d  libLPC1769.a
- 
-19:59:44 **** Clean-only build of configuration Debug for project TestEeprom ****
-make -r -j4 clean 
-rm -rf  ./src/TestEeprom.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o  ./src/TestEeprom.d ./src/cr_startup_lpc175x_6x.d ./src/crp.d  TestEeprom.axf
- 
-19:59:46 **** Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-Building file: ../src/system_LPC17xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC17xx -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC17xx.d" -MT"src/system_LPC17xx.o" -MT"src/system_LPC17xx.d" -o "src/system_LPC17xx.o" "../src/system_LPC17xx.c"
-Finished building: ../src/system_LPC17xx.c
- 
-Building target: libCMSIS_CORE_LPC17xx.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libCMSIS_CORE_LPC17xx.a"  ./src/system_LPC17xx.o   
-c:\nxp\MCUXpressoIDE_10.1.1_606\ide\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC17xx.a
-Finished building target: libCMSIS_CORE_LPC17xx.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libCMSIS_CORE_LPC17xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC17xx.a" >"libCMSIS_CORE_LPC17xx.lss"
-   text	   data	    bss	    dec	    hex	filename
-    404	      4	      0	    408	    198	system_LPC17xx.o (ex libCMSIS_CORE_LPC17xx.a)
- 
-19:59:49 **** Build of configuration Debug for project LPC1769 ****
-make -r all 
-Building file: ../src/Flash.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Flash.d" -MT"src/Flash.o" -MT"src/Flash.d" -o "src/Flash.o" "../src/Flash.c"
-../src/Flash.c: In function 'FLASH_WriteData':
-../src/Flash.c:26:17: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-  iap_command[1] = dstAddr;
-                 ^
-../src/Flash.c:27:17: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-  iap_command[2] = srcAddr;
-                 ^
-Finished building: ../src/Flash.c
- 
-Building file: ../src/GPIO.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/GPIO.d" -MT"src/GPIO.o" -MT"src/GPIO.d" -o "src/GPIO.o" "../src/GPIO.c"
-Finished building: ../src/GPIO.c
- 
-Building file: ../src/I2C.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/I2C.d" -MT"src/I2C.o" -MT"src/I2C.d" -o "src/I2C.o" "../src/I2C.c"
-Finished building: ../src/I2C.c
- 
-Building file: ../src/KeyPad.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/KeyPad.d" -MT"src/KeyPad.o" -MT"src/KeyPad.d" -o "src/KeyPad.o" "../src/KeyPad.c"
-In file included from ../src/KeyPad.c:2:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
- /** @defgroup GPIO_Public_Functions GPIO Public Functions
-  
-In file included from ../src/KeyPad.c:3:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/timer.h:33:1: warning: "/*" within comment [-Wcomment]
- /** @defgroup TIMER_Public_Functions TIMER Public Functions
-  
-../src/KeyPad.c: In function 'KEYPAD_Read':
-../src/KeyPad.c:46:23: warning: implicit declaration of function 'convertToKey' [-Wimplicit-function-declaration]
-  return keyPad_Layout[convertToKey()];
-                       ^~~~~~~~~~~~
-../src/KeyPad.c: In function 'convertToKey':
-../src/KeyPad.c:54:6: warning: unused variable 'p' [-Wunused-variable]
-  int p = keyPad_Layout[value];
-      ^
-Finished building: ../src/KeyPad.c
- 
-Building file: ../src/LCD.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -MT"src/LCD.d" -o "src/LCD.o" "../src/LCD.c"
-In file included from ../src/LCD.c:2:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
- /** @defgroup GPIO_Public_Functions GPIO Public Functions
-  
-In file included from ../src/LCD.c:3:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/timer.h:33:1: warning: "/*" within comment [-Wcomment]
- /** @defgroup TIMER_Public_Functions TIMER Public Functions
-  
-../src/LCD.c: In function 'LCD_Init':
-../src/LCD.c:27:2: warning: implicit declaration of function 'SPI_BeginTransfer' [-Wimplicit-function-declaration]
-  SPI_BeginTransfer(LCD_CS);
-  ^~~~~~~~~~~~~~~~~
-../src/LCD.c:29:2: warning: implicit declaration of function 'LCD_Command' [-Wimplicit-function-declaration]
-  LCD_Command(DISCTL);  // display control
-  ^~~~~~~~~~~
-../src/LCD.c:31:2: warning: implicit declaration of function 'LCD_Data' [-Wimplicit-function-declaration]
-  LCD_Data(0x0C);
-  ^~~~~~~~
-../src/LCD.c:62:2: warning: implicit declaration of function 'SPI_EndTransfer' [-Wimplicit-function-declaration]
-  SPI_EndTransfer(LCD_CS);
-  ^~~~~~~~~~~~~~~
-../src/LCD.c: In function 'LCD_LowLevelInit':
-../src/LCD.c:81:2: warning: implicit declaration of function 'SPI_Init' [-Wimplicit-function-declaration]
-  SPI_Init(SystemCoreClock / 8, 9);
-  ^~~~~~~~
-../src/LCD.c: At top level:
-../src/LCD.c:85:6: warning: conflicting types for 'LCD_Command'
- void LCD_Command(int command){
-      ^~~~~~~~~~~
-../src/LCD.c:29:2: note: previous implicit declaration of 'LCD_Command' was here
-  LCD_Command(DISCTL);  // display control
-  ^~~~~~~~~~~
-../src/LCD.c: In function 'LCD_Command':
-../src/LCD.c:89:2: warning: implicit declaration of function 'SPI_Transfer' [-Wimplicit-function-declaration]
-  SPI_Transfer(&send, rxBuffer, 1);
-  ^~~~~~~~~~~~
-../src/LCD.c: At top level:
-../src/LCD.c:92:6: warning: conflicting types for 'LCD_Data'
- void LCD_Data(int data){
-      ^~~~~~~~
-../src/LCD.c:31:2: note: previous implicit declaration of 'LCD_Data' was here
-  LCD_Data(0x0C);
-  ^~~~~~~~
-../src/LCD.c: In function 'LCD_WriteChar':
-../src/LCD.c:126:45: warning: variable 'convertedCol' set but not used [-Wunused-but-set-variable]
-  unsigned int pixel1, pixel2, convertedRow, convertedCol;
-                                             ^~~~~~~~~~~~
-../src/LCD.c:126:31: warning: variable 'convertedRow' set but not used [-Wunused-but-set-variable]
-  unsigned int pixel1, pixel2, convertedRow, convertedCol;
-                               ^~~~~~~~~~~~
-Finished building: ../src/LCD.c
- 
-Building file: ../src/RTC.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/RTC.d" -MT"src/RTC.o" -MT"src/RTC.d" -o "src/RTC.o" "../src/RTC.c"
-Finished building: ../src/RTC.c
- 
-Building file: ../src/SPI.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/SPI.d" -MT"src/SPI.o" -MT"src/SPI.d" -o "src/SPI.o" "../src/SPI.c"
-In file included from ../src/SPI.c:2:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
- /** @defgroup GPIO_Public_Functions GPIO Public Functions
-  
-../src/SPI.c: In function 'SPI_Init':
-../src/SPI.c:16:16: warning: variable 'dummy' set but not used [-Wunused-but-set-variable]
-  unsigned char dummy;
-                ^~~~~
-../src/SPI.c: In function 'SPI_Transfer':
-../src/SPI.c:35:9: warning: 'return' with a value, in function returning void
-  return i;
-         ^
-../src/SPI.c:28:6: note: declared here
- void SPI_Transfer(unsigned short *txBuffer, unsigned short *rxBuffer, int lenght){
-      ^~~~~~~~~~~~
-Finished building: ../src/SPI.c
- 
-Building file: ../src/Timer.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Timer.d" -MT"src/Timer.o" -MT"src/Timer.d" -o "src/Timer.o" "../src/Timer.c"
-In file included from ../src/Timer.c:2:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/timer.h:33:1: warning: "/*" within comment [-Wcomment]
- /** @defgroup TIMER_Public_Functions TIMER Public Functions
-  
-Finished building: ../src/Timer.c
- 
-Building file: ../src/eeprom.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/eeprom.d" -MT"src/eeprom.o" -MT"src/eeprom.d" -o "src/eeprom.o" "../src/eeprom.c"
-../src/eeprom.c: In function 'EEPROM_Write':
-../src/eeprom.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Ethernet.d" -MT"src/Ethernet.o" -MT"src/Ethernet.d" -o "src/Ethernet.o" "../src/Ethernet.c"
+In file included from ../src/Ethernet.c:2:0:
+C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/Ethernet.h:40:1: warning: data definition has no type or storage class
+ Ethernet_Init();
+ ^~~~~~~~~~~~~
+C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/Ethernet.h:40:1: warning: type defaults to 'int' in declaration of 'Ethernet_Init' [-Wimplicit-int]
+../src/Ethernet.c: In function 'ReadFromPHY':
+../src/Ethernet.c:8:19: error: 'PHY_DEF_ADR' undeclared (first use in this function)
+  LPC_EMAC->MADR = PHY_DEF_ADR | reg;
+                   ^~~~~~~~~~~
+../src/Ethernet.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/Ethernet.c:10:19: error: 'MCMD_READ' undeclared (first use in this function)
+  LPC_EMAC->MCMD = MCMD_READ;
+                   ^~~~~~~~~
+../src/Ethernet.c:12:24: error: 'MII_RD_TOUT' undeclared (first use in this function)
+  for (loop = 0; loop < MII_RD_TOUT; loop++) {
+                        ^~~~~~~~~~~
+../src/Ethernet.c:13:25: error: 'MIND_BUSY' undeclared (first use in this function)
+   if ((LPC_EMAC->MIND & MIND_BUSY) == 0) {
+                         ^~~~~~~~~
+../src/Ethernet.c: In function 'WriteToPHY':
+../src/Ethernet.c:26:19: error: 'PHY_DEF_ADR' undeclared (first use in this function)
+  LPC_EMAC->MADR = PHY_DEF_ADR | reg;
+                   ^~~~~~~~~~~
+../src/Ethernet.c:30:24: error: 'MII_WR_TOUT' undeclared (first use in this function)
+  for (loop = 0; loop < MII_WR_TOUT; loop++) {
+                        ^~~~~~~~~~~
+../src/Ethernet.c:31:25: error: 'MIND_BUSY' undeclared (first use in this function)
+   if ((LPC_EMAC->MIND & MIND_BUSY) == 0) {
+                         ^~~~~~~~~
+../src/Ethernet.c: At top level:
+../src/Ethernet.c:37:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ Ethernet_Init(){
+ ^~~~~~~~~~~~~
+../src/Ethernet.c: In function 'Ethernet_Init':
+../src/Ethernet.c:57:20: error: 'CONTROL_REGISTER' undeclared (first use in this function)
+  while(ReadFromPHY(CONTROL_REGISTER)&PHY_RESET);
+                    ^~~~~~~~~~~~~~~~
+../src/Ethernet.c:76:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
-Finished building: ../src/eeprom.c
- 
-Building file: ../src/lab5_font.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lab5_font.d" -MT"src/lab5_font.o" -MT"src/lab5_font.d" -o "src/lab5_font.o" "../src/lab5_font.c"
-../src/lab5_font.c:22:40: warning: missing braces around initializer [-Wmissing-braces]
- const unsigned char font8x16[97][16] = {
-                                        ^
-../src/lab5_font.c:22:40: note: (near initialization for 'font8x16')
-Finished building: ../src/lab5_font.c
- 
-Building file: ../src/storage.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/storage.d" -MT"src/storage.o" -MT"src/storage.d" -o "src/storage.o" "../src/storage.c"
-Finished building: ../src/storage.c
- 
-Building target: libLPC1769.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libLPC1769.a"  ./src/Flash.o ./src/GPIO.o ./src/I2C.o ./src/KeyPad.o ./src/LCD.o ./src/RTC.o ./src/SPI.o ./src/Timer.o ./src/eeprom.o ./src/lab5_font.o ./src/storage.o   
-c:\nxp\MCUXpressoIDE_10.1.1_606\ide\tools\bin\arm-none-eabi-ar.exe: creating libLPC1769.a
-Finished building target: libLPC1769.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libLPC1769.a" ; # arm-none-eabi-objdump -h -S "libLPC1769.a" >"libLPC1769.lss"
-   text	   data	    bss	    dec	    hex	filename
-    234	      0	      0	    234	     ea	Flash.o (ex libLPC1769.a)
-    216	      0	      0	    216	     d8	GPIO.o (ex libLPC1769.a)
-    988	      0	    148	   1136	    470	I2C.o (ex libLPC1769.a)
-    304	     32	     12	    348	    15c	KeyPad.o (ex libLPC1769.a)
-   1210	      8	     20	   1238	    4d6	LCD.o (ex libLPC1769.a)
-    432	      0	      0	    432	    1b0	RTC.o (ex libLPC1769.a)
-    252	      0	      0	    252	     fc	SPI.o (ex libLPC1769.a)
-    158	      0	      0	    158	     9e	Timer.o (ex libLPC1769.a)
-    284	      0	      0	    284	    11c	eeprom.o (ex libLPC1769.a)
-   1552	      0	      0	   1552	    610	lab5_font.o (ex libLPC1769.a)
-     80	      0	      0	     80	     50	storage.o (ex libLPC1769.a)
- 
-20:00:01 **** Build of configuration Debug for project TestEeprom ****
-make -r -j4 all 
-Building file: ../src/TestEeprom.c
-Building file: ../src/cr_startup_lpc175x_6x.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEeprom\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/TestEeprom.d" -MT"src/TestEeprom.o" -MT"src/TestEeprom.d" -o "src/TestEeprom.o" "../src/TestEeprom.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEeprom\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc175x_6x.d" -MT"src/cr_startup_lpc175x_6x.o" -MT"src/cr_startup_lpc175x_6x.d" -o "src/cr_startup_lpc175x_6x.o" "../src/cr_startup_lpc175x_6x.c"
-Building file: ../src/crp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEeprom\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
-../src/TestEeprom.c: In function 'main':
-../src/TestEeprom.c:26:2: warning: implicit declaration of function 'EEPROM_Init' [-Wimplicit-function-declaration]
-  EEPROM_Init();
-  ^~~~~~~~~~~
-Finished building: ../src/crp.c
-Finished building: ../src/cr_startup_lpc175x_6x.c
-Finished building: ../src/TestEeprom.c
- 
- 
- 
-Building target: TestEeprom.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\Debug" -Xlinker -Map="TestEeprom.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "TestEeprom_Debug.ld" -o "TestEeprom.axf"  ./src/TestEeprom.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx -lLPC1769
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       12020 B       512 KB      2.29%
-        RamLoc32:         640 B        32 KB      1.95%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: TestEeprom.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "TestEeprom.axf"; # arm-none-eabi-objcopy -v -O binary "TestEeprom.axf" "TestEeprom.bin" ; # checksum -p LPC1769 -d "TestEeprom.bin";
-   text	   data	    bss	    dec	    hex	filename
-  12020	      0	    640	  12660	   3174	TestEeprom.axf
- 
-20:00:48 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-make: Nothing to be done for `all'.
-20:00:50 **** Incremental Build of configuration Debug for project LPC1769 ****
-make -r all 
-make: Nothing to be done for `all'.
-20:00:52 **** Incremental Build of configuration Debug for project TestEeprom ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
-20:00:54 **** Incremental Build of configuration Debug for project TestEeprom ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
-20:01:59 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-make: Nothing to be done for `all'.
-20:02:01 **** Incremental Build of configuration Debug for project LPC1769 ****
-make -r all 
-make: Nothing to be done for `all'.
-20:02:02 **** Incremental Build of configuration Debug for project TestEeprom ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
-20:02:04 **** Incremental Build of configuration Debug for project TestEeprom ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
+make: *** [src/Ethernet.o] Error 1

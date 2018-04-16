@@ -1,6 +1,49 @@
-20:02:01 **** Incremental Build of configuration Debug for project LPC1769 ****
+18:27:48 **** Incremental Build of configuration Debug for project LPC1769 ****
 make -r all 
-make: Nothing to be done for `all'.
+Building file: ../src/Ethernet.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Ethernet.d" -MT"src/Ethernet.o" -MT"src/Ethernet.d" -o "src/Ethernet.o" "../src/Ethernet.c"
+In file included from ../src/Ethernet.c:2:0:
+C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/Ethernet.h:40:1: warning: data definition has no type or storage class
+ Ethernet_Init();
+ ^~~~~~~~~~~~~
+C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/Ethernet.h:40:1: warning: type defaults to 'int' in declaration of 'Ethernet_Init' [-Wimplicit-int]
+../src/Ethernet.c: In function 'ReadFromPHY':
+../src/Ethernet.c:8:19: error: 'PHY_DEF_ADR' undeclared (first use in this function)
+  LPC_EMAC->MADR = PHY_DEF_ADR | reg;
+                   ^~~~~~~~~~~
+../src/Ethernet.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/Ethernet.c:10:19: error: 'MCMD_READ' undeclared (first use in this function)
+  LPC_EMAC->MCMD = MCMD_READ;
+                   ^~~~~~~~~
+../src/Ethernet.c:12:24: error: 'MII_RD_TOUT' undeclared (first use in this function)
+  for (loop = 0; loop < MII_RD_TOUT; loop++) {
+                        ^~~~~~~~~~~
+../src/Ethernet.c:13:25: error: 'MIND_BUSY' undeclared (first use in this function)
+   if ((LPC_EMAC->MIND & MIND_BUSY) == 0) {
+                         ^~~~~~~~~
+../src/Ethernet.c: In function 'WriteToPHY':
+../src/Ethernet.c:26:19: error: 'PHY_DEF_ADR' undeclared (first use in this function)
+  LPC_EMAC->MADR = PHY_DEF_ADR | reg;
+                   ^~~~~~~~~~~
+../src/Ethernet.c:30:24: error: 'MII_WR_TOUT' undeclared (first use in this function)
+  for (loop = 0; loop < MII_WR_TOUT; loop++) {
+                        ^~~~~~~~~~~
+../src/Ethernet.c:31:25: error: 'MIND_BUSY' undeclared (first use in this function)
+   if ((LPC_EMAC->MIND & MIND_BUSY) == 0) {
+                         ^~~~~~~~~
+../src/Ethernet.c: At top level:
+../src/Ethernet.c:37:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ Ethernet_Init(){
+ ^~~~~~~~~~~~~
+../src/Ethernet.c: In function 'Ethernet_Init':
+../src/Ethernet.c:57:20: error: 'CONTROL_REGISTER' undeclared (first use in this function)
+  while(ReadFromPHY(CONTROL_REGISTER)&PHY_RESET);
+                    ^~~~~~~~~~~~~~~~
+../src/Ethernet.c:76:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/Ethernet.o] Error 1
 
-20:02:01 Build Finished (took 125ms)
+18:27:49 Build Finished (took 234ms)
 

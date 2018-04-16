@@ -33,12 +33,13 @@ void I2C1_IRQHandler(void)
 	case 0x18:			/* Regardless, it's a ACK */
 	if ( WrLength == 1 )
 	{
-	  LPC_I2C1->I2CONSET = I2CONSET_STO;      /* Set Stop flag */
-	  state = I2C_NO_DATA;
+		LPC_I2C1->I2CONSET = I2CONSET_STO;      /* Set Stop flag */
+		state = I2C_NO_DATA;
 	}
 	else
 	{
-	  LPC_I2C1->I2DAT = Wrbuffer[WrIndex++];
+		LPC_I2C1->I2CONCLR = I2CONCLR_STOP | I2CONCLR_STAC;
+		LPC_I2C1->I2DAT = Wrbuffer[WrIndex++];
 	}
 	LPC_I2C1->I2CONCLR = I2CONCLR_SIC;
 	break;
@@ -123,8 +124,6 @@ void I2C1_IRQHandler(void)
 
 void I2C_Init(){
 	LPC_SC->PCONP |= 1 << 19;
-
-	LPC_SC->PCLKSEL1 |= 1 << 6;
 
 	LPC_PINCON->PINSEL0 |= 1 | 1<<1 | 1<<2 | 1<<3;
 	LPC_PINCON->PINMODE0 &= ~((1)|(1<<2)|(1<<3)|(1<<4));

@@ -13,8 +13,6 @@ void EEPROM_Init(){
 }
 
 int EEPROM_Write(char * buffer, int length){
-	if(state == I2C_STARTED)
-		return 0; //busy
 	if(length > I2C_BUFFER_SIZE - 3)
 		return -1; // buffer to big
 
@@ -23,21 +21,18 @@ int EEPROM_Write(char * buffer, int length){
 	Wrbuffer[2] = 0;
 
 	for(int i = 3; i < length + 3; i++)
-		Wrbuffer[i] = buffer[i -3];
+		Wrbuffer[i] = buffer[i - 3];
 
 	WrLength = length + 3;
 
 	I2C_Start();
+
+	while(state == I2C_STARTED);
 }
 
 int EEPROM_Read(char buffer [64], int numberOfBytes){
-	while(state == I2C_STARTED);
-	//	return 0; //busy
 
 	EEPROM_Write(0, 0);
-
-	while(state == I2C_STARTED);
-
 
 	Wrbuffer[0] = ((0xA) << 4) | 1;
 	RdLength = numberOfBytes;

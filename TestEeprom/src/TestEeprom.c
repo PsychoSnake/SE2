@@ -24,29 +24,29 @@
 int main(void) {
 
 	EEPROM_Init();
+	/*
+	char test [12] = {0,0,0,0,0,0,0,0,0,0,0,0};
+	*/
 
-    char * test = "Pramaara Escrita";
+	char test [7] = {0};
+	while(1){
+		EEPROM_Read(test, 3);
+		test[0]=0;
+	}
 
-    printf("%d", sizeof(test));
+/*	char read [3];
 
-    EEPROM_Write(test, 16);
+	EEPROM_Read(read, 3);
 
-    char read [16];
+	printf("Read: %s", read);
 
+	char * test2 = "SE";
 
-    EEPROM_Read(read, 16);
+	EEPROM_Write(test2, 3);
 
-    printf("Read: %s", read);
+	EEPROM_Read(read, 3);
 
-    char * test2 = "SI";
+	printf("Read: %s", read);*/
 
-    EEPROM_Write(test2, 2);
-
-
-    EEPROM_Read(read, 2);
-
-
-    printf("Read: %s", read);
-
-    return 0 ;
+	return 0 ;
 }

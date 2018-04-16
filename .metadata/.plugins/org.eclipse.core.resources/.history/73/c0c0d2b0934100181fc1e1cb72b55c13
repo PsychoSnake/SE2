@@ -1,0 +1,18 @@
+#include "LPC17xx.h"
+#include "Ethernet.h"
+
+Ethernet_Init(){
+	//back to back 0x15
+
+
+	LPC_SC->PCONP |= ETHERNET_ENABLE_POWER_CLOCK;
+
+	LPC_PINCON->PINSEL2 |= 1 | (1<<2) | (1<<8) | (1<<16) | (1<<18) | (1<<20) | (1<<28) | (1<<30);
+	LPC_PINCON->PINSEL3 |= 1 | (1<<2);
+
+	LPC_EMAC->MAC1 |= PASS_ALL_RECEIVE_FRAMES;
+	LPC_EMAC->MAC2 |=
+
+
+
+}
