@@ -74,7 +74,7 @@ void TxDescriptorInit(){
 	unsigned int * txStatus = (unsigned int *)TX_STAT_BASE;
 
 	for(int i = 0; i < NUM_TX_FRAG; i++){
-		 *txBase = txBuf;
+		 *txBase = rxBuf;
 		 txBase+=2;
 		 txBuf += ETH_FRAG_SIZE;
 
@@ -94,7 +94,7 @@ void TxDescriptorInit(){
 	  LPC_EMAC->TxProduceIndex  = 0;
 }
 
-void Ethernet_Init(){
+Ethernet_Init(){
 
 	LPC_SC->PCONP |= ETHERNET_ENABLE_POWER_CLOCK;
 

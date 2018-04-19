@@ -94,7 +94,7 @@ void TxDescriptorInit(){
 	  LPC_EMAC->TxProduceIndex  = 0;
 }
 
-void Ethernet_Init(){
+Ethernet_Init(){
 
 	LPC_SC->PCONP |= ETHERNET_ENABLE_POWER_CLOCK;
 

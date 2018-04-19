@@ -32,7 +32,6 @@
 #define MII_WR_TOUT 100000
 
 #define A_100BASE 1<<8
-#define A_100BASE_TX_FULL_DUPLEX 1<<8
 
 #define MAC_STATION_ADDRESS_0 0
 #define MAC_STATION_ADDRESS_1 0
@@ -74,6 +73,6 @@
 
 
 
-void Ethernet_Init();
+Ethernet_Init();
 
 

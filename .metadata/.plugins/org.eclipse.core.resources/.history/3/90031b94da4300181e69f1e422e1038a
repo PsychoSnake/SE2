@@ -38,63 +38,20 @@ void RxDescriptorInit(){
 	unsigned int * rxBase = (unsigned int *)RX_DESC_BASE;
 	unsigned int rxBuf = (unsigned int)RX_BUF_BASE;
 	unsigned int * rxControl = (unsigned int *)RX_DESC_BASE + 4;
-	unsigned int * rxStatus = (unsigned int *)RX_STAT_BASE;
-	unsigned int * rxCrc = (unsigned int *)RX_STAT_BASE + 4;
+
 
 	for(int i = 0; i < NUM_RX_FRAG; i++){
 		 *rxBase = rxBuf;
 		 rxBase+=2;
 		 rxBuf += ETH_FRAG_SIZE;
+		 *rxControl = RC
 
-		 *rxControl = RCTRL_INT | (ETH_FRAG_SIZE - 1);
-		 rxControl+=2;
 
-		 *rxStatus = 0;
-		 rxStatus+=2;
-
-		 *rxStatus = 0;
-		 rxCrc+=2;
 	}
-
-
-	  /* Set EMAC Receive Descriptor Registers. */
-	  LPC_EMAC->RxDescriptor    = RX_DESC_BASE;
-	  LPC_EMAC->RxStatus        = RX_STAT_BASE;
-	  LPC_EMAC->RxDescriptorNumber = NUM_RX_FRAG-1;
-
-	  /* Rx Descriptors Point to 0 */
-	  LPC_EMAC->RxConsumeIndex  = 0;
 
 }
 
-void TxDescriptorInit(){
-	unsigned int * txBase = (unsigned int *)TX_DESC_BASE;
-	unsigned int txBuf = (unsigned int)TX_BUF_BASE;
-	unsigned int * txControl = (unsigned int *)TX_DESC_BASE + 4;
-	unsigned int * txStatus = (unsigned int *)TX_STAT_BASE;
-
-	for(int i = 0; i < NUM_TX_FRAG; i++){
-		 *txBase = txBuf;
-		 txBase+=2;
-		 txBuf += ETH_FRAG_SIZE;
-
-		 *txControl = 0;
-		 txControl+=2;
-
-		 *txStatus = 0;
-		 txStatus++;
-	}
-
-	 /* Set EMAC Transmit Descriptor Registers. */
-	  LPC_EMAC->TxDescriptor    = TX_DESC_BASE;
-	  LPC_EMAC->TxStatus        = TX_STAT_BASE;
-	  LPC_EMAC->TxDescriptorNumber = NUM_TX_FRAG-1;
-
-	  /* Tx Descriptors Point to 0 */
-	  LPC_EMAC->TxProduceIndex  = 0;
-}
-
-void Ethernet_Init(){
+Ethernet_Init(){
 
 	LPC_SC->PCONP |= ETHERNET_ENABLE_POWER_CLOCK;
 
@@ -114,7 +71,7 @@ void Ethernet_Init(){
 
 	//Reset PHY and wait to finish
 	WriteToPHY(BASIC_CONTROL_REGISTER, PHY_RESET);
-	while(ReadFromPHY(BASIC_CONTROL_REGISTER)&PHY_RESET);
+	while(ReadFromPHY(CONTROL_REGISTER)&PHY_RESET);
 
 	WriteToPHY(AUTO_NEGOTIATION_ADVERTISEMENT_REGISTER, A_100BASE_TX_FULL_DUPLEX);
 	WriteToPHY(BASIC_CONTROL_REGISTER, PHY_AUTO_NEGOTIATION_ENABLE);
@@ -142,22 +99,21 @@ void Ethernet_Init(){
 
 
 	//Initialization the Rx descriptors
-	RxDescriptorInit();
-	//Initialization the Tx descriptors
-	TxDescriptorInit();
 
-	/* Receive Broadcast and Perfect Match Packets */
-	LPC_EMAC->RxFilterCtrl = RFC_BROADCAST_EN | RFC_PERFECT_EN;
 
-	/* Enable EMAC interrupts. */
-	LPC_EMAC->IntEnable = INT_RX_DONE | INT_TX_DONE;
 
-	/* Reset all interrupts */
-	LPC_EMAC->IntClear  = 0xFFFF;
 
-	/* Enable receive and transmit mode of MAC Ethernet core */
-	LPC_EMAC->Command  |= (RX_ENABLE | TX_ENABLE);
-	LPC_EMAC->MAC1     |= MAC1_RECEIVE_ENABLE;
+
+
+
+
+
+
+
+
+
+
+
 }
 
 

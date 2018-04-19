@@ -24,15 +24,9 @@
 #define PHY_AUTO_NEGOTIATION_ENABLE 1<<12
 #define PHY_AUTO_NEGOTIATION_COMPLETE 1<<5
 #define PHY_LINK_STATUS 1<<2
-#define PHY_DEF_ADR 1
-
-#define MCMD_READ 1
-#define MIND_BUSY 1
-#define MII_RD_TOUT 100000
-#define MII_WR_TOUT 100000
+#define PHY_DEF_REG
 
 #define A_100BASE 1<<8
-#define A_100BASE_TX_FULL_DUPLEX 1<<8
 
 #define MAC_STATION_ADDRESS_0 0
 #define MAC_STATION_ADDRESS_1 0
@@ -74,6 +68,6 @@
 
 
 
-void Ethernet_Init();
+Ethernet_Init();
 
 
