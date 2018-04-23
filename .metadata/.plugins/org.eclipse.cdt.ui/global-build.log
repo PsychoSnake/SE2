@@ -1,33 +1,15 @@
-15:14:53 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+18:26:02 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for `all'.
-15:14:54 **** Incremental Build of configuration Debug for project LPC1769 ****
+18:26:02 **** Incremental Build of configuration Debug for project TestEthernet ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+18:26:05 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
-Building file: ../src/Ethernet.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Ethernet.d" -MT"src/Ethernet.o" -MT"src/Ethernet.d" -o "src/Ethernet.o" "../src/Ethernet.c"
-Finished building: ../src/Ethernet.c
- 
-Building target: libLPC1769.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libLPC1769.a"  ./src/Ethernet.o ./src/Flash.o ./src/GPIO.o ./src/I2C.o ./src/KeyPad.o ./src/LCD.o ./src/RTC.o ./src/SPI.o ./src/Timer.o ./src/eeprom.o ./src/lab5_font.o ./src/storage.o   
-c:\nxp\MCUXpressoIDE_10.1.1_606\ide\tools\bin\arm-none-eabi-ar.exe: creating libLPC1769.a
-Finished building target: libLPC1769.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libLPC1769.a" ; # arm-none-eabi-objdump -h -S "libLPC1769.a" >"libLPC1769.lss"
-   text	   data	    bss	    dec	    hex	filename
-    888	      0	      0	    888	    378	Ethernet.o (ex libLPC1769.a)
-    234	      0	      0	    234	     ea	Flash.o (ex libLPC1769.a)
-    216	      0	      0	    216	     d8	GPIO.o (ex libLPC1769.a)
-    976	      0	    148	   1124	    464	I2C.o (ex libLPC1769.a)
-    304	     32	     12	    348	    15c	KeyPad.o (ex libLPC1769.a)
-   1210	      8	     20	   1238	    4d6	LCD.o (ex libLPC1769.a)
-    432	      0	      0	    432	    1b0	RTC.o (ex libLPC1769.a)
-    252	      0	      0	    252	     fc	SPI.o (ex libLPC1769.a)
-    158	      0	      0	    158	     9e	Timer.o (ex libLPC1769.a)
-    260	      0	      0	    260	    104	eeprom.o (ex libLPC1769.a)
-   1552	      0	      0	   1552	    610	lab5_font.o (ex libLPC1769.a)
-     80	      0	      0	     80	     50	storage.o (ex libLPC1769.a)
- 
+make: Nothing to be done for `all'.
+18:26:06 **** Incremental Build of configuration Debug for project TestEthernet ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+18:26:07 **** Incremental Build of configuration Debug for project TestEthernet ****
+make -r -j4 all 
+make: Nothing to be done for `all'.

@@ -1,5 +1,5 @@
 #define ETHERNET_ENABLE_POWER_CLOCK 1<<30
-#define PASS_ALL_RECEIVE_FRAMES 1<<1
+
 #define RECEIVE_ENABLE 1
 
 #define FULL_DUPLEX 1
@@ -24,7 +24,7 @@
 #define PHY_AUTO_NEGOTIATION_ENABLE 1<<12
 #define PHY_AUTO_NEGOTIATION_COMPLETE 1<<5
 #define PHY_LINK_STATUS 1<<2
-#define PHY_DEF_ADR 1
+#define PHY_DEF_ADR 1<<8
 
 #define MCMD_READ 1
 #define MIND_BUSY 1
@@ -67,6 +67,19 @@
 #define TX_STAT_BASE (TX_DESC_BASE + NUM_TX_FRAG*8)
 #define RX_BUF_BASE (TX_STAT_BASE + NUM_TX_FRAG*4)
 #define TX_BUF_BASE (RX_BUF_BASE + NUM_RX_FRAG*ETH_FRAG_SIZE)
+
+/* MAC Configuration Register 1 */
+#define MAC1_RESET_TX         		 0x00000100  /* Reset TX Logic                    */
+#define MAC1_RESET_MCS_TX     		 0x00000200  /* Reset MAC TX Control Sublayer     */
+#define MAC1_RESET_RX         		 0x00000400  /* Reset RX Logic                    */
+#define MAC1_RESET_MCS_RX     		 0x00000800  /* Reset MAC RX Control Sublayer     */
+#define MAC1_SIMULATION_RESET        0x00004000  /* Simulation Reset                  */
+#define MAC1_SOFT_RESET       		 0x00008000  /* Soft Reset MAC                    */
+#define MAC1_PASS_ALL_RECEIVE_FRAMES 1<<1
+
+#define COMMAND_REGISTER_RESET          0x00000008  /* Reset Host Registers              */
+#define COMMAND_TX_RESET           0x00000010  /* Reset Transmit Datapath           */
+#define COMMAND_RX_RESET           0x00000020  /* Reset Receive Datapath            */
 
 /* RX Descriptor Control Word */
 #define RCTRL_INT           0x80000000  /* Generate RxDone Interrupt         */
