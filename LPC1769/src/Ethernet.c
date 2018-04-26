@@ -1,6 +1,9 @@
 #include "LPC17xx.h"
 #include "Ethernet.h"
 
+int length;
+char buffer [ETH_FRAG_SIZE];
+
 unsigned short ReadFromPHY (unsigned char reg)
 {
 	unsigned int loop;
@@ -179,12 +182,40 @@ void Ethernet_Init(){
 }
 
 
-int * ReceiveFrame(){
+int ReceiveFrame(){
+	int idx = LPC_EMAC->RxConsumeIndex;
+	if(idx != LPC_EMAC->RxProduceIndex){
+		char * pointer =  LPC_EMAC->RxDescriptor[idx*2];
+		int size = LPC_EMAC->RxDescriptor[idx*2 + 1] & RX_CONTROL_SIZE_MASK;
 
+		for(int i = 0; i < size; i++)
+			buffer[i] = pointer[i];
+
+		if(++idx > LPC_EMAC->RxDescriptorNumber)
+			idx = 0;
+
+
+		LPC_EMAC->RxConsumeIndex = idx;
+
+		length = size;
+
+		return size;
+	}
+	else return 0;
 }
 
 void WriteFrame(){
+	int idx = LPC_EMAC->TxProduceIndex;
+	char * pointer = LPC_EMAC->TxDescriptor[idx*2];
 
+	for(int i = 0; i < length; i++)
+		pointer[i] = buffer[i];
+
+	LPC_EMAC->TxDescriptor[idx*2 + 1] = length | (1 << 30) | (1<<31);
+
+	if(++idx > LPC_EMAC->TxDescriptorNumber)
+		idx = 0;
+	LPC_EMAC->TxProduceIndex = idx;
 }
 
 

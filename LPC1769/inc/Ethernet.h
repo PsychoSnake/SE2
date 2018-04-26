@@ -84,6 +84,8 @@
 /* RX Descriptor Control Word */
 #define RCTRL_INT           0x80000000  /* Generate RxDone Interrupt         */
 
+#define RX_CONTROL_SIZE_MASK 0x7FF
+
 
 
 
