@@ -6,20 +6,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="RdIndex" key="selection"/>
+		<item value="timer" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="imer"/>
+			<item value="Timer"/>
 			<item value="RdIndex"/>
 			<item value="I2C_NACK_ON_ADDRESS"/>
 			<item value="I2C1_IRQHandler"/>
 			<item value="I2C"/>
 			<item value="400FC0C4"/>
 			<item value="0x400FC0C4"/>
-			<item value="SEL0"/>
-			<item value="SEL"/>
 		</list>
 		<list key="replacehistory">
 			<item value="LPC_RTC"/>

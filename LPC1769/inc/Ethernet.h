@@ -90,5 +90,6 @@
 
 
 void Ethernet_Init();
-
+int Ethernet_ReceiveFrame(char * buffer);
+void Ethernet_WriteFrame(char * buffer, int length);
 
