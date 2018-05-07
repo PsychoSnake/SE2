@@ -1,467 +1,72 @@
-18:26:27 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+17:05:29 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
 make -r all 
 make: Nothing to be done for `all'.
-18:26:28 **** Incremental Build of configuration Debug for project LPC1769 ****
-make -r all 
-Building file: ../src/Ethernet.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Ethernet.d" -MT"src/Ethernet.o" -MT"src/Ethernet.d" -o "src/Ethernet.o" "../src/Ethernet.c"
-../src/Ethernet.c: In function 'Ethernet_Init':
-../src/Ethernet.c:130:6: warning: unused variable 'b' [-Wunused-variable]
-  int b = ReadFromPHY(2);
-      ^
-Finished building: ../src/Ethernet.c
- 
-Building target: libLPC1769.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libLPC1769.a"  ./src/uip/psock.o ./src/uip/uip-fw.o ./src/uip/uip-neighbor.o ./src/uip/uip-split.o ./src/uip/uip.o ./src/uip/uip_arp.o ./src/uip/uiplib.o  ./src/apps/webserver/http-strings.o ./src/apps/webserver/httpd-cgi.o ./src/apps/webserver/httpd-fs.o ./src/apps/webserver/httpd.o  ./src/Ethernet.o ./src/Flash.o ./src/GPIO.o ./src/I2C.o ./src/KeyPad.o ./src/LCD.o ./src/RTC.o ./src/SPI.o ./src/Timer.o ./src/eeprom.o ./src/lab5_font.o ./src/storage.o   
-c:\nxp\MCUXpressoIDE_10.1.1_606\ide\tools\bin\arm-none-eabi-ar.exe: creating libLPC1769.a
-Finished building target: libLPC1769.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libLPC1769.a" ; # arm-none-eabi-objdump -h -S "libLPC1769.a" >"libLPC1769.lss"
-   text	   data	    bss	    dec	    hex	filename
-   1444	      0	      0	   1444	    5a4	psock.o (ex libLPC1769.a)
-   1128	      0	     36	   1164	    48c	uip-fw.o (ex libLPC1769.a)
-    747	      0	     96	    843	    34b	uip-neighbor.o (ex libLPC1769.a)
-    320	      0	      0	    320	    140	uip-split.o (ex libLPC1769.a)
-   6017	      0	   8757	  14774	   39b6	uip.o (ex libLPC1769.a)
-   1322	      0	    104	   1426	    592	uip_arp.o (ex libLPC1769.a)
-    158	      0	      0	    158	     9e	uiplib.o (ex libLPC1769.a)
-    586	      0	      0	    586	    24a	http-strings.o (ex libLPC1769.a)
-   1131	     52	      0	   1183	    49f	httpd-cgi.o (ex libLPC1769.a)
-   6053	      0	     20	   6073	   17b9	httpd-fs.o (ex libLPC1769.a)
-   2418	      0	      0	   2418	    972	httpd.o (ex libLPC1769.a)
-   1320	      0	      0	   1320	    528	Ethernet.o (ex libLPC1769.a)
-    234	      0	      0	    234	     ea	Flash.o (ex libLPC1769.a)
-    216	      0	      0	    216	     d8	GPIO.o (ex libLPC1769.a)
-    976	      0	    148	   1124	    464	I2C.o (ex libLPC1769.a)
-    304	     32	     12	    348	    15c	KeyPad.o (ex libLPC1769.a)
-   1210	      8	     20	   1238	    4d6	LCD.o (ex libLPC1769.a)
-    432	      0	      0	    432	    1b0	RTC.o (ex libLPC1769.a)
-    252	      0	      0	    252	     fc	SPI.o (ex libLPC1769.a)
-    158	      0	      0	    158	     9e	Timer.o (ex libLPC1769.a)
-    260	      0	      0	    260	    104	eeprom.o (ex libLPC1769.a)
-   1552	      0	      0	   1552	    610	lab5_font.o (ex libLPC1769.a)
-     80	      0	      0	     80	     50	storage.o (ex libLPC1769.a)
- 
-18:26:29 **** Incremental Build of configuration Debug for project TestEthernet ****
+17:05:29 **** Incremental Build of configuration Debug for project FreeRTOS-template ****
 make -r -j4 all 
-Building file: ../src/uip/psock.c
-Building file: ../src/uip/uip-fw.c
-Building file: ../src/uip/uip-neighbor.c
-Building file: ../src/uip/uip-split.c
+Building file: ../main.c
 Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uip/psock.d" -MT"src/uip/psock.o" -MT"src/uip/psock.d" -o "src/uip/psock.o" "../src/uip/psock.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uip/uip-fw.d" -MT"src/uip/uip-fw.o" -MT"src/uip/uip-fw.d" -o "src/uip/uip-fw.o" "../src/uip/uip-fw.c"
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uip/uip-neighbor.d" -MT"src/uip/uip-neighbor.o" -MT"src/uip/uip-neighbor.d" -o "src/uip/uip-neighbor.o" "../src/uip/uip-neighbor.c"
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uip/uip-split.d" -MT"src/uip/uip-split.o" -MT"src/uip/uip-split.d" -o "src/uip/uip-split.o" "../src/uip/uip-split.c"
-../src/uip/psock.c: In function 'psock_send':
-../src/uip/psock.c:188:14: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
-   s->sendptr = buf;
-              ^
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:85:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver/httpd.h:38,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver/webserver.h:38,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc/uip-conf.h:150,
-                 from ../src/uip/uipopt.h:70,
-                 from ../src/uip/psock.c:39:
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-../src/uip/psock.c:179:3: note: in expansion of macro 'PT_BEGIN'
-   PT_BEGIN(&s->psockpt);
-   ^~~~~~~~
-../src/uip/psock.c: In function 'psock_generator_send':
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-../src/uip/psock.c:218:3: note: in expansion of macro 'PT_BEGIN'
-   PT_BEGIN(&s->psockpt);
-   ^~~~~~~~
-../src/uip/psock.c: In function 'psock_readto':
-../src/uip/psock.c:276:26: warning: pointer targets in passing argument 2 of 'buf_setup' differ in signedness [-Wpointer-sign]
-   buf_setup(&psock->buf, psock->bufptr, psock->bufsize);
-                          ^~~~~
-../src/uip/psock.c:75:1: note: expected 'u8_t * {aka unsigned char *}' but argument is of type 'char *'
- buf_setup(struct psock_buf *buf,
- ^~~~~~~~~
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:85:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver/httpd.h:38,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver/webserver.h:38,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc/uip-conf.h:150,
-                 from ../src/uip/uipopt.h:70,
-                 from ../src/uip/psock.c:39:
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-../src/uip/psock.c:274:3: note: in expansion of macro 'PT_BEGIN'
-   PT_BEGIN(&psock->psockpt);
-   ^~~~~~~~
-../src/uip/psock.c: In function 'psock_readbuf':
-../src/uip/psock.c:303:26: warning: pointer targets in passing argument 2 of 'buf_setup' differ in signedness [-Wpointer-sign]
-   buf_setup(&psock->buf, psock->bufptr, psock->bufsize);
-                          ^~~~~
-../src/uip/psock.c:75:1: note: expected 'u8_t * {aka unsigned char *}' but argument is of type 'char *'
- buf_setup(struct psock_buf *buf,
- ^~~~~~~~~
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:85:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver/httpd.h:38,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver/webserver.h:38,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc/uip-conf.h:150,
-                 from ../src/uip/uipopt.h:70,
-                 from ../src/uip/psock.c:39:
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-../src/uip/psock.c:301:3: note: in expansion of macro 'PT_BEGIN'
-   PT_BEGIN(&psock->psockpt);
-   ^~~~~~~~
-../src/uip/psock.c: In function 'psock_init':
-../src/uip/psock.c:334:26: warning: pointer targets in passing argument 2 of 'buf_setup' differ in signedness [-Wpointer-sign]
-   buf_setup(&psock->buf, buffer, buffersize);
-                          ^~~~~~
-../src/uip/psock.c:75:1: note: expected 'u8_t * {aka unsigned char *}' but argument is of type 'char *'
- buf_setup(struct psock_buf *buf,
- ^~~~~~~~~
-../src/uip/uip-neighbor.c: In function 'uip_neighbor_add':
-../src/uip/uip-neighbor.c:90:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-   printf("Adding neighbor with link address %02x:%02x:%02x:%02x:%02x:%02x\n",
-   ^~~~~~
-../src/uip/uip-split.c: In function 'uip_split_output':
-../src/uip/uip-split.c:90:5: warning: implicit declaration of function 'tcpip_output' [-Wimplicit-function-declaration]
-     tcpip_output();
-     ^~~~~~~~~~~~
-Finished building: ../src/uip/uip-neighbor.c
-Finished building: ../src/uip/uip-fw.c
- 
-Finished building: ../src/uip/psock.c
- 
- 
-Building file: ../src/uip/uip.c
-Building file: ../src/uip/uip_arp.c
-Building file: ../src/uip/uiplib.c
-Invoking: MCU C Compiler
-Finished building: ../src/uip/uip-split.c
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uip/uip.d" -MT"src/uip/uip.o" -MT"src/uip/uip.d" -o "src/uip/uip.o" "../src/uip/uip.c"
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
- 
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uip/uip_arp.d" -MT"src/uip/uip_arp.o" -MT"src/uip/uip_arp.d" -o "src/uip/uip_arp.o" "../src/uip/uip_arp.c"
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uip/uiplib.d" -MT"src/uip/uiplib.o" -MT"src/uip/uiplib.d" -o "src/uip/uiplib.o" "../src/uip/uiplib.c"
-Building file: ../src/apps/webserver/httpd-cgi.c
-Invoking: MCU C Compiler
-../src/uip/uip.c: In function 'uip_process':
-../src/uip/uip.c:1847:2: warning: label 'ip_send_nolen' defined but not used [-Wunused-label]
-  ip_send_nolen:
-  ^~~~~~~~~~~~~
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS-template" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O0 -g3 -fsigned-char -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"main.d" -MT"main.o" -MT"main.d" -o "main.o" "../main.c"
+In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
+                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
+                 from ../main.c:78:
+C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
+C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
+  __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-../src/uip/uip.c:113:27: warning: 'all_ones_addr' defined but not used [-Wunused-const-variable=]
- static const uip_ipaddr_t all_ones_addr =
-                           ^~~~~~~~~~~~~
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/apps/webserver/httpd-cgi.d" -MT"src/apps/webserver/httpd-cgi.o" -MT"src/apps/webserver/httpd-cgi.d" -o "src/apps/webserver/httpd-cgi.o" "../src/apps/webserver/httpd-cgi.c"
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:85:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver/httpd.h:38,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver/webserver.h:38,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc/uip-conf.h:150,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/uipopt.h:70,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/uip.h:56,
-                 from ../src/apps/webserver/httpd-cgi.c:48:
-../src/apps/webserver/httpd-cgi.c: In function 'nullfunction':
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:158:28: note: in expansion of macro 'PT_BEGIN'
- #define PSOCK_BEGIN(psock) PT_BEGIN(&((psock)->pt))
-                            ^~~~~~~~
-../src/apps/webserver/httpd-cgi.c:67:3: note: in expansion of macro 'PSOCK_BEGIN'
-   PSOCK_BEGIN(&s->sout);
-   ^~~~~~~~~~~
-../src/apps/webserver/httpd-cgi.c: In function 'file_stats':
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:158:28: note: in expansion of macro 'PT_BEGIN'
- #define PSOCK_BEGIN(psock) PT_BEGIN(&((psock)->pt))
-                            ^~~~~~~~
-../src/apps/webserver/httpd-cgi.c:95:3: note: in expansion of macro 'PSOCK_BEGIN'
-   PSOCK_BEGIN(&s->sout);
-   ^~~~~~~~~~~
-../src/apps/webserver/httpd-cgi.c: In function 'tcp_stats':
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:158:28: note: in expansion of macro 'PT_BEGIN'
- #define PSOCK_BEGIN(psock) PT_BEGIN(&((psock)->pt))
-                            ^~~~~~~~
-../src/apps/webserver/httpd-cgi.c:167:3: note: in expansion of macro 'PSOCK_BEGIN'
-   PSOCK_BEGIN(&s->sout);
-   ^~~~~~~~~~~
-../src/apps/webserver/httpd-cgi.c: In function 'net_stats':
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:158:28: note: in expansion of macro 'PT_BEGIN'
- #define PSOCK_BEGIN(psock) PT_BEGIN(&((psock)->pt))
-                            ^~~~~~~~
-../src/apps/webserver/httpd-cgi.c:189:3: note: in expansion of macro 'PSOCK_BEGIN'
-   PSOCK_BEGIN(&s->sout);
-   ^~~~~~~~~~~
-Finished building: ../src/uip/uiplib.c
-Finished building: ../src/uip/uip_arp.c
+C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
+Finished building: ../main.c
  
- 
-Building file: ../src/apps/webserver/httpd-fs.c
-Finished building: ../src/uip/uip.c
-Building file: ../src/apps/webserver/httpd.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/apps/webserver/httpd-fs.d" -MT"src/apps/webserver/httpd-fs.o" -MT"src/apps/webserver/httpd-fs.d" -o "src/apps/webserver/httpd-fs.o" "../src/apps/webserver/httpd-fs.c"
- 
-Invoking: MCU C Compiler
-Finished building: ../src/apps/webserver/httpd-cgi.c
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/apps/webserver/httpd.d" -MT"src/apps/webserver/httpd.o" -MT"src/apps/webserver/httpd.d" -o "src/apps/webserver/httpd.o" "../src/apps/webserver/httpd.c"
-Building file: ../src/TestEthernet.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver" -I"C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/TestEthernet.d" -MT"src/TestEthernet.o" -MT"src/TestEthernet.d" -o "src/TestEthernet.o" "../src/TestEthernet.c"
-In file included from ../src/apps/webserver/httpd-fs.c:44:0:
-../src/apps/webserver/httpd-fsdata.c:585:65: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_processes_shtml[] = {{NULL, data_processes_shtml, data_processes_shtml + 17, sizeof(data_processes_shtml) - 17}};
-                                                                 ^~~~~~~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:585:65: note: (near initialization for 'file_processes_shtml[0].name')
-../src/apps/webserver/httpd-fsdata.c:585:87: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_processes_shtml[] = {{NULL, data_processes_shtml, data_processes_shtml + 17, sizeof(data_processes_shtml) - 17}};
-                                                                                       ^~~~~~~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:585:87: note: (near initialization for 'file_processes_shtml[0].data')
-In file included from ../src/apps/webserver/httpd-fs.c:44:0:
-../src/apps/webserver/httpd-fsdata.c:587:74: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_404_html[] = {{file_processes_shtml, data_404_html, data_404_html + 10, sizeof(data_404_html) - 10}};
-                                                                          ^~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:587:74: note: (near initialization for 'file_404_html[0].name')
-../src/apps/webserver/httpd-fsdata.c:587:89: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_404_html[] = {{file_processes_shtml, data_404_html, data_404_html + 10, sizeof(data_404_html) - 10}};
-                                                                                         ^~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:587:89: note: (near initialization for 'file_404_html[0].data')
-../src/apps/webserver/httpd-fsdata.c:589:70: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_files_shtml[] = {{file_404_html, data_files_shtml, data_files_shtml + 13, sizeof(data_files_shtml) - 13}};
-                                                                      ^~~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:589:70: note: (near initialization for 'file_files_shtml[0].name')
-../src/apps/webserver/httpd-fsdata.c:589:88: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_files_shtml[] = {{file_404_html, data_files_shtml, data_files_shtml + 13, sizeof(data_files_shtml) - 13}};
-                                                                                        ^~~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:589:88: note: (near initialization for 'file_files_shtml[0].data')
-../src/apps/webserver/httpd-fsdata.c:591:73: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_footer_html[] = {{file_files_shtml, data_footer_html, data_footer_html + 13, sizeof(data_footer_html) - 13}};
-                                                                         ^~~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:591:73: note: (near initialization for 'file_footer_html[0].name')
-../src/apps/webserver/httpd-fsdata.c:591:91: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_footer_html[] = {{file_files_shtml, data_footer_html, data_footer_html + 13, sizeof(data_footer_html) - 13}};
-                                                                                           ^~~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:591:91: note: (near initialization for 'file_footer_html[0].data')
-../src/apps/webserver/httpd-fsdata.c:593:73: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_header_html[] = {{file_footer_html, data_header_html, data_header_html + 13, sizeof(data_header_html) - 13}};
-                                                                         ^~~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:593:73: note: (near initialization for 'file_header_html[0].name')
-../src/apps/webserver/httpd-fsdata.c:593:91: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_header_html[] = {{file_footer_html, data_header_html, data_header_html + 13, sizeof(data_header_html) - 13}};
-                                                                                           ^~~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:593:91: note: (near initialization for 'file_header_html[0].data')
-../src/apps/webserver/httpd-fsdata.c:595:72: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_index_html[] = {{file_header_html, data_index_html, data_index_html + 12, sizeof(data_index_html) - 12}};
-                                                                        ^~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:595:72: note: (near initialization for 'file_index_html[0].name')
-../src/apps/webserver/httpd-fsdata.c:595:89: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_index_html[] = {{file_header_html, data_index_html, data_index_html + 12, sizeof(data_index_html) - 12}};
-                                                                                         ^~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:595:89: note: (near initialization for 'file_index_html[0].data')
-../src/apps/webserver/httpd-fsdata.c:597:70: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_style_css[] = {{file_index_html, data_style_css, data_style_css + 11, sizeof(data_style_css) - 11}};
-                                                                      ^~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:597:70: note: (near initialization for 'file_style_css[0].name')
-../src/apps/webserver/httpd-fsdata.c:597:86: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_style_css[] = {{file_index_html, data_style_css, data_style_css + 11, sizeof(data_style_css) - 11}};
-                                                                                      ^~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:597:86: note: (near initialization for 'file_style_css[0].data')
-../src/apps/webserver/httpd-fsdata.c:599:69: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_tcp_shtml[] = {{file_style_css, data_tcp_shtml, data_tcp_shtml + 11, sizeof(data_tcp_shtml) - 11}};
-                                                                     ^~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:599:69: note: (near initialization for 'file_tcp_shtml[0].name')
-../src/apps/webserver/httpd-fsdata.c:599:85: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_tcp_shtml[] = {{file_style_css, data_tcp_shtml, data_tcp_shtml + 11, sizeof(data_tcp_shtml) - 11}};
-                                                                                     ^~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:599:85: note: (near initialization for 'file_tcp_shtml[0].data')
-../src/apps/webserver/httpd-fsdata.c:601:68: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_fade_png[] = {{file_tcp_shtml, data_fade_png, data_fade_png + 10, sizeof(data_fade_png) - 10}};
-                                                                    ^~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:601:68: note: (near initialization for 'file_fade_png[0].name')
-../src/apps/webserver/httpd-fsdata.c:601:83: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_fade_png[] = {{file_tcp_shtml, data_fade_png, data_fade_png + 10, sizeof(data_fade_png) - 10}};
-                                                                                   ^~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:601:83: note: (near initialization for 'file_fade_png[0].data')
-../src/apps/webserver/httpd-fsdata.c:603:70: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_stats_shtml[] = {{file_fade_png, data_stats_shtml, data_stats_shtml + 13, sizeof(data_stats_shtml) - 13}};
-                                                                      ^~~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:603:70: note: (near initialization for 'file_stats_shtml[0].name')
-../src/apps/webserver/httpd-fsdata.c:603:88: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
- const struct httpd_fsdata_file file_stats_shtml[] = {{file_fade_png, data_stats_shtml, data_stats_shtml + 13, sizeof(data_stats_shtml) - 13}};
-                                                                                        ^~~~~~~~~~~~~~~~
-../src/apps/webserver/httpd-fsdata.c:603:88: note: (near initialization for 'file_stats_shtml[0].data')
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:85:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver/httpd.h:38,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\apps\webserver/webserver.h:38,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\inc/uip-conf.h:150,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/uipopt.h:70,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/uip.h:56,
-                 from ../src/apps/webserver/httpd.c:58:
-../src/apps/webserver/httpd.c: In function 'send_file':
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:158:28: note: in expansion of macro 'PT_BEGIN'
- #define PSOCK_BEGIN(psock) PT_BEGIN(&((psock)->pt))
-                            ^~~~~~~~
-../src/apps/webserver/httpd.c:97:3: note: in expansion of macro 'PSOCK_BEGIN'
-   PSOCK_BEGIN(&s->sout);
-   ^~~~~~~~~~~
-../src/apps/webserver/httpd.c: In function 'send_part_of_file':
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:158:28: note: in expansion of macro 'PT_BEGIN'
- #define PSOCK_BEGIN(psock) PT_BEGIN(&((psock)->pt))
-                            ^~~~~~~~
-../src/apps/webserver/httpd.c:111:3: note: in expansion of macro 'PSOCK_BEGIN'
-   PSOCK_BEGIN(&s->sout);
-   ^~~~~~~~~~~
-../src/apps/webserver/httpd.c: In function 'handle_script':
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-../src/apps/webserver/httpd.c:132:3: note: in expansion of macro 'PT_BEGIN'
-   PT_BEGIN(&s->scriptpt);
-   ^~~~~~~~
-../src/apps/webserver/httpd.c: In function 'send_headers':
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:158:28: note: in expansion of macro 'PT_BEGIN'
- #define PSOCK_BEGIN(psock) PT_BEGIN(&((psock)->pt))
-                            ^~~~~~~~
-../src/apps/webserver/httpd.c:192:3: note: in expansion of macro 'PSOCK_BEGIN'
-   PSOCK_BEGIN(&s->sout);
-   ^~~~~~~~~~~
-../src/apps/webserver/httpd.c: In function 'handle_output':
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-../src/apps/webserver/httpd.c:221:3: note: in expansion of macro 'PT_BEGIN'
-   PT_BEGIN(&s->outputpt);
-   ^~~~~~~~
-../src/apps/webserver/httpd.c: In function 'handle_input':
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/pt.h:115:29: warning: variable 'PT_YIELD_FLAG' set but not used [-Wunused-but-set-variable]
- #define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; LC_RESUME((pt)->lc)
-                             ^
-C:\Faculdade\6_Semestre\SE2\SE2\TestEthernet\src\uip/psock.h:158:28: note: in expansion of macro 'PT_BEGIN'
- #define PSOCK_BEGIN(psock) PT_BEGIN(&((psock)->pt))
-                            ^~~~~~~~
-../src/apps/webserver/httpd.c:251:3: note: in expansion of macro 'PSOCK_BEGIN'
-   PSOCK_BEGIN(&s->sin);
-   ^~~~~~~~~~~
-In file included from ../src/TestEthernet.c:27:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/timer.h:33:1: warning: "/*" within comment [-Wcomment]
- /** @defgroup TIMER_Public_Functions TIMER Public Functions
-  
-../src/TestEthernet.c: In function 'main':
-../src/TestEthernet.c:86:37: warning: pointer targets in passing argument 1 of 'Ethernet_ReceiveFrame' differ in signedness [-Wpointer-sign]
-     uip_len = Ethernet_ReceiveFrame(uip_buf);
-                                     ^~~~~~~
-In file included from ../src/TestEthernet.c:26:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/Ethernet.h:93:5: note: expected 'char *' but argument is of type 'u8_t * {aka unsigned char *}'
- int Ethernet_ReceiveFrame(char * buffer);
-     ^~~~~~~~~~~~~~~~~~~~~
-../src/TestEthernet.c:96:24: warning: pointer targets in passing argument 1 of 'Ethernet_WriteFrame' differ in signedness [-Wpointer-sign]
-    Ethernet_WriteFrame(uip_buf, uip_len);
-                        ^~~~~~~
-In file included from ../src/TestEthernet.c:26:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/Ethernet.h:94:6: note: expected 'char *' but argument is of type 'u8_t * {aka unsigned char *}'
- void Ethernet_WriteFrame(char * buffer, int length);
-      ^~~~~~~~~~~~~~~~~~~
-../src/TestEthernet.c:104:23: warning: pointer targets in passing argument 1 of 'Ethernet_WriteFrame' differ in signedness [-Wpointer-sign]
-   Ethernet_WriteFrame(uip_buf, uip_len);
-                       ^~~~~~~
-In file included from ../src/TestEthernet.c:26:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/Ethernet.h:94:6: note: expected 'char *' but argument is of type 'u8_t * {aka unsigned char *}'
- void Ethernet_WriteFrame(char * buffer, int length);
-      ^~~~~~~~~~~~~~~~~~~
-../src/TestEthernet.c:117:24: warning: pointer targets in passing argument 1 of 'Ethernet_WriteFrame' differ in signedness [-Wpointer-sign]
-    Ethernet_WriteFrame(uip_buf, uip_len);
-                        ^~~~~~~
-In file included from ../src/TestEthernet.c:26:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/Ethernet.h:94:6: note: expected 'char *' but argument is of type 'u8_t * {aka unsigned char *}'
- void Ethernet_WriteFrame(char * buffer, int length);
-      ^~~~~~~~~~~~~~~~~~~
-../src/TestEthernet.c: In function 'resolv_found':
-../src/TestEthernet.c:152:10: warning: unused variable 'ipaddr2' [-Wunused-variable]
-   u16_t *ipaddr2;
-          ^~~~~~~
-Finished building: ../src/apps/webserver/httpd.c
-Finished building: ../src/apps/webserver/httpd-fs.c
- 
-Finished building: ../src/TestEthernet.c
- 
- 
-Building target: TestEthernet.axf
+Building target: SimpleDemo.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\Debug" -Xlinker -Map="TestEthernet.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "TestEthernet_Debug.ld" -o "TestEthernet.axf"  ./src/uip/psock.o ./src/uip/uip-fw.o ./src/uip/uip-neighbor.o ./src/uip/uip-split.o ./src/uip/uip.o ./src/uip/uip_arp.o ./src/uip/uiplib.o  ./src/apps/webserver/http-strings.o ./src/apps/webserver/httpd-cgi.o ./src/apps/webserver/httpd-fs.o ./src/apps/webserver/httpd.o  ./src/TestEthernet.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx -lLPC1769
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       31116 B       512 KB      5.93%
-        RamLoc32:       10556 B        32 KB     32.21%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: TestEthernet.axf
+arm-none-eabi-gcc -nostdlib -L"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\Debug" -Xlinker --gc-sections -Xlinker -Map=SimpleDemo.map -mcpu=cortex-m3 -mthumb -T "FreeRTOS-template_Debug.ld" -o "SimpleDemo.axf"  ./cr_startup_lpc17.o ./main.o   -lCMSIS_CORE_LPC17xx -lFreeRTOS_Library
+Finished building target: SimpleDemo.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "TestEthernet.axf"; # arm-none-eabi-objcopy -v -O binary "TestEthernet.axf" "TestEthernet.bin" ; # checksum -p LPC1769 -d "TestEthernet.bin";
+arm-none-eabi-size SimpleDemo.axf; # arm-none-eabi-objcopy -O ihex SimpleDemo.axf SimpleDemo.hex ;
    text	   data	    bss	    dec	    hex	filename
-  31060	     56	  10500	  41616	   a290	TestEthernet.axf
+   5900	     16	   5876	  11792	   2e10	SimpleDemo.axf
  
-18:26:41 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+17:05:41 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
 make -r all 
 make: Nothing to be done for `all'.
-18:26:42 **** Incremental Build of configuration Debug for project LPC1769 ****
-make -r all 
-make: Nothing to be done for `all'.
-18:26:42 **** Incremental Build of configuration Debug for project TestEthernet ****
+17:05:41 **** Incremental Build of configuration Debug for project FreeRTOS-template ****
 make -r -j4 all 
 make: Nothing to be done for `all'.
-18:26:43 **** Incremental Build of configuration Debug for project TestEthernet ****
+17:05:42 **** Incremental Build of configuration Debug for project FreeRTOS-template ****
 make -r -j4 all 
 make: Nothing to be done for `all'.
-18:28:18 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+17:07:00 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
 make -r all 
 make: Nothing to be done for `all'.
-18:28:19 **** Incremental Build of configuration Debug for project LPC1769 ****
-make -r all 
-make: Nothing to be done for `all'.
-18:28:19 **** Incremental Build of configuration Debug for project TestEthernet ****
+17:07:00 **** Incremental Build of configuration Debug for project FreeRTOS-template ****
 make -r -j4 all 
-make: Nothing to be done for `all'.
-18:28:20 **** Incremental Build of configuration Debug for project TestEthernet ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
-18:31:13 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-make: Nothing to be done for `all'.
-18:31:13 **** Incremental Build of configuration Debug for project LPC1769 ****
-make -r all 
-make: Nothing to be done for `all'.
-18:31:14 **** Incremental Build of configuration Debug for project TestEthernet ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
-18:31:15 **** Incremental Build of configuration Debug for project TestEthernet ****
+Building file: ../main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS-template" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O0 -g3 -fsigned-char -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"main.d" -MT"main.o" -MT"main.d" -o "main.o" "../main.c"
+In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
+                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
+                 from ../main.c:78:
+C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
+C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
+  __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
+Finished building: ../main.c
+ 
+Building target: SimpleDemo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\Debug" -Xlinker --gc-sections -Xlinker -Map=SimpleDemo.map -mcpu=cortex-m3 -mthumb -T "FreeRTOS-template_Debug.ld" -o "SimpleDemo.axf"  ./cr_startup_lpc17.o ./main.o   -lCMSIS_CORE_LPC17xx -lFreeRTOS_Library
+Finished building target: SimpleDemo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size SimpleDemo.axf; # arm-none-eabi-objcopy -O ihex SimpleDemo.axf SimpleDemo.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   5904	     16	   5876	  11796	   2e14	SimpleDemo.axf
+ 
+17:07:02 **** Incremental Build of configuration Debug for project FreeRTOS-template ****
 make -r -j4 all 
 make: Nothing to be done for `all'.
