@@ -55,13 +55,12 @@ void incrementResults(int gameState,int player, struct players_info *players){
 }
 
 void startGame(struct players_info *players){
-	struct tm dateTime = {0,0,0,0,0,0,0,0};
-  char grid[9] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+	char grid[9] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 	int event, player = 1, isValidPlay = 1, x, y, gameState;
 	char mark;
-	//dateTime = TIME_GetDateTime();
+	struct tm * dateTime = TIME_GetDateTime();
 	UI_ClearScreen();
-	UI_DrawGameGrid(&dateTime);
+	UI_DrawGameGrid(dateTime);
 	while(1){
 		player = player % 2 != 0 ? 1 : 2;
     if(isValidPlay)

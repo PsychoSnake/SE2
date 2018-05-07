@@ -4,6 +4,8 @@
 	<comment></comment>
 	<projects>
 		<project>CMSIS_CORE_LPC17xx</project>
+		<project>FreeRTOS_Library</project>
+		<project>LPC1769</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

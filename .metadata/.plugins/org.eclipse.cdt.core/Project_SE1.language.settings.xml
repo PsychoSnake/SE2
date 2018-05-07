@@ -19,6 +19,12 @@
 						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
 					</resource>
 					<resource project-relative-path="src/App.c">
+						<entry kind="includePath" name="/FreeRTOS_Library/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS_Library/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="includePath" name="/LPC1769/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -47,6 +53,12 @@
 						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
 					</resource>
 					<resource project-relative-path="src/crp.c">
+						<entry kind="includePath" name="/FreeRTOS_Library/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS_Library/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="includePath" name="/LPC1769/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -61,6 +73,12 @@
 						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
 					</resource>
 					<resource project-relative-path="src/Utils/TimeManager.c">
+						<entry kind="includePath" name="/FreeRTOS_Library/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS_Library/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="includePath" name="/LPC1769/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -75,6 +93,12 @@
 						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
 					</resource>
 					<resource project-relative-path="src/Utils/UI_Manager.c">
+						<entry kind="includePath" name="/FreeRTOS_Library/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS_Library/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="includePath" name="/LPC1769/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -89,6 +113,12 @@
 						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
 					</resource>
 					<resource project-relative-path="src/config_module/Config.c">
+						<entry kind="includePath" name="/FreeRTOS_Library/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS_Library/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="includePath" name="/LPC1769/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -103,6 +133,32 @@
 						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
 					</resource>
 					<resource project-relative-path="src/Utils/EventManager.c">
+						<entry kind="includePath" name="/FreeRTOS_Library/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS_Library/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/LPC1769/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC17XX__" value=""/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/cr_startup_lpc17.c">
+						<entry kind="includePath" name="/FreeRTOS_Library/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS_Library/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="includePath" name="/LPC1769/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -117,6 +173,12 @@
 						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
 					</resource>
 					<resource project-relative-path="src/play_module/Play.c">
+						<entry kind="includePath" name="/FreeRTOS_Library/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS_Library/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="includePath" name="/LPC1769/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>

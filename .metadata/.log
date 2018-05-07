@@ -9378,3 +9378,106 @@ java.io.IOException: Input Stream Closed
 	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
 	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-05-07 17:18:36.788
+!MESSAGE Indexed 'Project_SE1' (8 sources, 16 headers) in 0.464 sec: 1,555 declarations; 2,707 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-05-07 17:19:58.465
+!MESSAGE Indexed 'Project_SE1' (8 sources, 16 headers) in 0.323 sec: 1,555 declarations; 2,707 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-05-07 17:21:00.977
+!MESSAGE Telnet session connected on port 3330->53514 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-07 17:21:11.162
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@1560369): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-05-07 17:21:11.162
+!MESSAGE Invalid context type.
+
+!ENTRY org.eclipse.debug.ui 4 120 2018-05-07 17:21:12.771
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-05-07 17:21:23.774
+!MESSAGE Telnet session connected on port 3330->53520 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-07 17:25:11.377
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@1efaad0): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-05-07 17:25:11.377
+!MESSAGE Invalid context type.
+
+!ENTRY org.eclipse.debug.ui 4 120 2018-05-07 17:25:13.032
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-05-07 17:25:42.646
+!MESSAGE Telnet session connected on port 3330->53530 @ 127.0.0.1
+
+!ENTRY org.eclipse.debug.ui 4 120 2018-05-07 17:27:50.322
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-05-07 17:28:06.070
+!MESSAGE Telnet session connected on port 3330->53540 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-05-07 17:31:18.591
+!MESSAGE Indexed 'LPC1769' (23 sources, 88 headers) in 1.88 sec: 3,522 declarations; 11,149 references; 2 unresolved inclusions; 0 syntax errors; 4 unresolved names (0.027%)
+
+!ENTRY org.eclipse.debug.ui 4 120 2018-05-07 17:32:50.542
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-05-07 17:48:59.799
+!MESSAGE Indexed 'FreeRTOS_Library' (8 sources, 28 headers) in 0.504 sec: 2,388 declarations; 5,327 references; 0 unresolved inclusions; 7 syntax errors; 1 unresolved names (0.013%)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-05-07 18:03:21.108
+!MESSAGE Telnet session connected on port 3330->53590 @ 127.0.0.1
+
+!ENTRY org.eclipse.debug.ui 4 120 2018-05-07 18:05:21.682
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.crt.log 1 0 2018-05-07 18:13:40.116
+!MESSAGE Drivers loaded in 1221 milliseconds
+
+!ENTRY com.crt.dsfdebug 1 0 2018-05-07 18:14:01.241
+!MESSAGE Telnet session connected on port 3330->53604 @ 127.0.0.1
+
+!ENTRY org.eclipse.debug.ui 4 120 2018-05-07 18:15:03.943
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

@@ -3,6 +3,9 @@
 #include "rtc.h"
 #include "eeprom.h"
 
+#include "FreeRTOS.h"
+#include "task.h"
+
 #define CONFIG_EVENT 21
 #define PLAY_EVENT 10
 #define CLOCK_RATE 1
@@ -14,25 +17,34 @@ struct players_info players = {0,0,0,0,0,0};
 void initialize();
 
 
-int main(){
+void startProcess(){
 	initialize();
-	unsigned int event;
-	struct tm *dateTime;
-	while(1){
-		dateTime = TIME_GetDateTime();
-		STORAGE_LoadGameResults(&players);
-		UI_DrawIdleScreen(dateTime, &players);
-		event = EVENT_GetIdleEvent();
+		unsigned int event;
+		struct tm *dateTime;
+		while(1){
+			dateTime = TIME_GetDateTime();
+			STORAGE_LoadGameResults(&players);
+			UI_DrawIdleScreen(dateTime, &players);
+			event = EVENT_GetIdleEvent();
 
-		switch(event){
-			case IDLE_CONFIG:
-				CONFIG_StartConfiguration();
-				break;
-			case IDLE_PLAY:
-				startGame(&players);
-				break;
+			switch(event){
+				case IDLE_CONFIG:
+					CONFIG_StartConfiguration();
+					break;
+				case IDLE_PLAY:
+					startGame(&players);
+					break;
+			}
 		}
-	}
+}
+
+int main(){
+	xTaskCreate(startProcess, "mainProcess",
+		 configMINIMAL_STACK_SIZE, 0, 1 , 0 );
+	vTaskStartScheduler();
+
+	while(1);
+	return 0;
 }
 
 void initialize(){

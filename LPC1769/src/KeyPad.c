@@ -48,7 +48,7 @@ int KEYPAD_Read(void){
 
 int convertToKey(){
 	if(collumnVal == 2){
-		return 21;
+		return 12;
 	}
 	int value = lineVal * 3 + ( ( ~collumnVal & 7 ) >> 1) ; // 3 * 3 + (5 >> 1)
 	int p = keyPad_Layout[value];

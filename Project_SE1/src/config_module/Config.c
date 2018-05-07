@@ -120,7 +120,7 @@ void deleteResults(){
   event = EVENT_GetEvent();
   switch (event) {
     case CONFIG_GAME_RESULTS_DELETE:{
-      //STORAGE_ClearGameResults();
+      STORAGE_ClearGameResults();
       break;
     }
     case CONFIG_GAME_RESULTS_EXIT:

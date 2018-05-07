@@ -1,12 +1,16 @@
 #include "I2C.h"
 #include "LPC17xx.h"
 
+#include "FreeRTOS.h"
+#include "task.h"
+
 extern char Rdbuffer [I2C_BUFFER_SIZE];
 extern char Wrbuffer [I2C_BUFFER_SIZE];
 extern int WrLength;
 extern int RdLength;
 extern int RdIndex;
 extern int state;
+
 
 void EEPROM_Init(){
 	I2C_Init();
@@ -28,6 +32,8 @@ int EEPROM_Write(char * buffer, int length){
 	I2C_Start();
 
 	while(state == I2C_STARTED);
+
+	vTaskDelay(5);
 }
 
 int EEPROM_Read(char buffer [64], int numberOfBytes){

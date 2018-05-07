@@ -1,6 +1,6 @@
-15:58:08 **** Incremental Build of configuration Debug for project LPC1769 ****
+18:13:34 **** Incremental Build of configuration Debug for project LPC1769 ****
 make -r all 
 make: Nothing to be done for `all'.
 
-15:58:09 Build Finished (took 1s.161ms)
+18:13:34 Build Finished (took 110ms)
 

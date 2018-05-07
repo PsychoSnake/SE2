@@ -1,72 +1,72 @@
-17:05:29 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
+18:13:07 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for `all'.
-17:05:29 **** Incremental Build of configuration Debug for project FreeRTOS-template ****
+18:13:08 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
+make -r all 
+make: Nothing to be done for `all'.
+18:13:08 **** Incremental Build of configuration Debug for project LPC1769 ****
+make -r all 
+make: Nothing to be done for `all'.
+18:13:09 **** Incremental Build of configuration Debug for project Project_SE1 ****
 make -r -j4 all 
-Building file: ../main.c
+Building file: ../src/play_module/Play.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS-template" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O0 -g3 -fsigned-char -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"main.d" -MT"main.o" -MT"main.d" -o "main.o" "../main.c"
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
-                 from ../main.c:78:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
-  __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
-                                                          ^~~~~~~~~~~~~~~~~~~~~~~
-At top level:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
-Finished building: ../main.c
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/play_module/Play.d" -MT"src/play_module/Play.o" -MT"src/play_module/Play.d" -o "src/play_module/Play.o" "../src/play_module/Play.c"
+../src/play_module/Play.c: In function 'startGame':
+../src/play_module/Play.c:61:25: warning: implicit declaration of function 'TIME_GetDateTime' [-Wimplicit-function-declaration]
+  struct tm * dateTime = TIME_GetDateTime();
+                         ^~~~~~~~~~~~~~~~
+../src/play_module/Play.c:61:25: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+../src/play_module/Play.c:62:2: warning: implicit declaration of function 'UI_ClearScreen' [-Wimplicit-function-declaration]
+  UI_ClearScreen();
+  ^~~~~~~~~~~~~~
+../src/play_module/Play.c:63:2: warning: implicit declaration of function 'UI_DrawGameGrid' [-Wimplicit-function-declaration]
+  UI_DrawGameGrid(dateTime);
+  ^~~~~~~~~~~~~~~
+../src/play_module/Play.c:67:7: warning: implicit declaration of function 'UI_DrawPlayerTurn' [-Wimplicit-function-declaration]
+       UI_DrawPlayerTurn(player, 0);
+       ^~~~~~~~~~~~~~~~~
+../src/play_module/Play.c:70:11: warning: implicit declaration of function 'EVENT_GetEvent' [-Wimplicit-function-declaration]
+   event = EVENT_GetEvent();
+           ^~~~~~~~~~~~~~
+../src/play_module/Play.c:134:6: warning: implicit declaration of function 'UI_Write' [-Wimplicit-function-declaration]
+      UI_Write(mark, x, y);
+      ^~~~~~~~
+../src/play_module/Play.c:144:3: warning: implicit declaration of function 'TIME_Wait' [-Wimplicit-function-declaration]
+   TIME_Wait(1000);
+   ^~~~~~~~~
+../src/play_module/Play.c:145:2: warning: implicit declaration of function 'UI_PlayResultScreen' [-Wimplicit-function-declaration]
+  UI_PlayResultScreen(gameState, player);
+  ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/play_module/Play.c
  
-Building target: SimpleDemo.axf
+Building target: Project_SE1.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\Debug" -Xlinker --gc-sections -Xlinker -Map=SimpleDemo.map -mcpu=cortex-m3 -mthumb -T "FreeRTOS-template_Debug.ld" -o "SimpleDemo.axf"  ./cr_startup_lpc17.o ./main.o   -lCMSIS_CORE_LPC17xx -lFreeRTOS_Library
-Finished building target: SimpleDemo.axf
+arm-none-eabi-gcc -nostdlib -L"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\Debug" -L"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\Debug" -Xlinker -Map="Project_SE1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Project_SE1_Debug.ld" -o "Project_SE1.axf"  ./src/play_module/Play.o  ./src/config_module/Config.o  ./src/Utils/EventManager.o ./src/Utils/TimeManager.o ./src/Utils/UI_Manager.o  ./src/App.o ./src/cr_startup_lpc17.o ./src/crp.o   -lCMSIS_CORE_LPC17xx -lFreeRTOS_Library -lLPC1769
+Memory region         Used Size  Region Size  %age Used
+       MFlash512:       16480 B       512 KB      3.14%
+        RamLoc32:        6256 B        32 KB     19.09%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: Project_SE1.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size SimpleDemo.axf; # arm-none-eabi-objcopy -O ihex SimpleDemo.axf SimpleDemo.hex ;
+arm-none-eabi-size "Project_SE1.axf"; # arm-none-eabi-objcopy -v -O binary "Project_SE1.axf" "Project_SE1.bin" ; # checksum -p LPC1769 -d "Project_SE1.bin";
    text	   data	    bss	    dec	    hex	filename
-   5900	     16	   5876	  11792	   2e10	SimpleDemo.axf
+  16308	    172	   6080	  22560	   5820	Project_SE1.axf
  
-17:05:41 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
+18:13:33 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for `all'.
-17:05:41 **** Incremental Build of configuration Debug for project FreeRTOS-template ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
-17:05:42 **** Incremental Build of configuration Debug for project FreeRTOS-template ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
-17:07:00 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
+18:13:33 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
 make -r all 
 make: Nothing to be done for `all'.
-17:07:00 **** Incremental Build of configuration Debug for project FreeRTOS-template ****
+18:13:34 **** Incremental Build of configuration Debug for project LPC1769 ****
+make -r all 
+make: Nothing to be done for `all'.
+18:13:35 **** Incremental Build of configuration Debug for project Project_SE1 ****
 make -r -j4 all 
-Building file: ../main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS-template" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O0 -g3 -fsigned-char -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"main.d" -MT"main.o" -MT"main.d" -o "main.o" "../main.c"
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
-                 from ../main.c:78:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
-  __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
-                                                          ^~~~~~~~~~~~~~~~~~~~~~~
-At top level:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
-Finished building: ../main.c
- 
-Building target: SimpleDemo.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\Debug" -Xlinker --gc-sections -Xlinker -Map=SimpleDemo.map -mcpu=cortex-m3 -mthumb -T "FreeRTOS-template_Debug.ld" -o "SimpleDemo.axf"  ./cr_startup_lpc17.o ./main.o   -lCMSIS_CORE_LPC17xx -lFreeRTOS_Library
-Finished building target: SimpleDemo.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size SimpleDemo.axf; # arm-none-eabi-objcopy -O ihex SimpleDemo.axf SimpleDemo.hex ;
-   text	   data	    bss	    dec	    hex	filename
-   5904	     16	   5876	  11796	   2e14	SimpleDemo.axf
- 
-17:07:02 **** Incremental Build of configuration Debug for project FreeRTOS-template ****
+make: Nothing to be done for `all'.
+18:13:36 **** Incremental Build of configuration Debug for project Project_SE1 ****
 make -r -j4 all 
 make: Nothing to be done for `all'.
