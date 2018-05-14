@@ -1,6 +1,6 @@
+#include <Timer.h>
 #include "LPC17xx.h"
 #include "gpio.h"
-#include "timer.h"
 
 #define L0 (1 << 9)
 #define L1 (1 << 8)

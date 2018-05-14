@@ -24,7 +24,7 @@
 #include "uip.h"
 #include "uip_arp.h"
 #include "Ethernet.h"
-#include <timer.h>
+#include <Timer.h>
 #define CLOCK_SECOND 1000
 
 #define BUF ((struct uip_eth_hdr *)&uip_buf[0])
@@ -56,7 +56,7 @@ main(void)
   uip_ipaddr(ipaddr, 255,255,255,0);
   uip_setnetmask(ipaddr);
 
-  httpd_init();
+  //httpd_init();
 
   /*  telnetd_init();*/
 
@@ -73,12 +73,12 @@ main(void)
 	    "Testing SMTP from uIP",
 	    "Test message sent by uIP\r\n");*/
 
-  /*
+
     webclient_init();
     resolv_init();
     uip_ipaddr(ipaddr, 195,54,122,204);
     resolv_conf(ipaddr);
-    resolv_query("www.sics.se");*/
+    resolv_query("www.sics.se");
 
 
 

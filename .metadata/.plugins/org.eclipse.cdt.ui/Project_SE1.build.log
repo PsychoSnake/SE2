@@ -1,6 +1,210 @@
-18:13:36 **** Incremental Build of configuration Debug for project Project_SE1 ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
+16:27:12 **** Build of configuration Debug for project Project_SE1 ****
+make -r -j3 all 
+Building file: ../src/play_module/Play.c
+Building file: ../src/config_module/Config.c
+Building file: ../src/Utils/EventManager.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/play_module/Play.d" -MT"src/play_module/Play.o" -MT"src/play_module/Play.d" -o "src/play_module/Play.o" "../src/play_module/Play.c"
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Utils/EventManager.d" -MT"src/Utils/EventManager.o" -MT"src/Utils/EventManager.d" -o "src/Utils/EventManager.o" "../src/Utils/EventManager.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/config_module/Config.d" -MT"src/config_module/Config.o" -MT"src/config_module/Config.d" -o "src/config_module/Config.o" "../src/config_module/Config.c"
+../src/Utils/EventManager.c: In function 'EVENT_Init':
+../src/Utils/EventManager.c:10:3: warning: implicit declaration of function 'KEYPAD_Init' [-Wimplicit-function-declaration]
+   KEYPAD_Init(key_layout);
+   ^~~~~~~~~~~
+../src/Utils/EventManager.c: In function 'EVENT_GetIdleEvent':
+../src/Utils/EventManager.c:14:3: warning: implicit declaration of function 'TIME_Wait' [-Wimplicit-function-declaration]
+   TIME_Wait(400);
+   ^~~~~~~~~
+../src/Utils/EventManager.c:15:13: warning: implicit declaration of function 'KEYPAD_Read' [-Wimplicit-function-declaration]
+   int key = KEYPAD_Read();
+             ^~~~~~~~~~~
+../src/play_module/Play.c: In function 'startGame':
+../src/Utils/EventManager.c:17:12: warning: implicit declaration of function 'TIMER0_GetValue' [-Wimplicit-function-declaration]
+     time = TIMER0_GetValue();
+            ^~~~~~~~~~~~~~~
+../src/play_module/Play.c:61:25: warning: implicit declaration of function 'TIME_GetDateTime' [-Wimplicit-function-declaration]
+  struct tm * dateTime = TIME_GetDateTime();
+                         ^~~~~~~~~~~~~~~~
+../src/play_module/Play.c:61:25: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+../src/play_module/Play.c:62:2: warning: implicit declaration of function 'UI_ClearScreen' [-Wimplicit-function-declaration]
+  UI_ClearScreen();
+  ^~~~~~~~~~~~~~
+../src/Utils/EventManager.c:19:34: warning: implicit declaration of function 'TIMER0_Elapse' [-Wimplicit-function-declaration]
+     if(lastKey == IDLE_CONFIG && TIMER0_Elapse(time) > 2000){
+                                  ^~~~~~~~~~~~~
+../src/play_module/Play.c:63:2: warning: implicit declaration of function 'UI_DrawGameGrid' [-Wimplicit-function-declaration]
+  UI_DrawGameGrid(dateTime);
+  ^~~~~~~~~~~~~~~
+../src/play_module/Play.c:67:7: warning: implicit declaration of function 'UI_DrawPlayerTurn' [-Wimplicit-function-declaration]
+       UI_DrawPlayerTurn(player, 0);
+       ^~~~~~~~~~~~~~~~~
+../src/play_module/Play.c:70:11: warning: implicit declaration of function 'EVENT_GetEvent' [-Wimplicit-function-declaration]
+   event = EVENT_GetEvent();
+           ^~~~~~~~~~~~~~
+../src/play_module/Play.c:134:6: warning: implicit declaration of function 'UI_Write' [-Wimplicit-function-declaration]
+      UI_Write(mark, x, y);
+      ^~~~~~~~
+../src/play_module/Play.c:144:3: warning: implicit declaration of function 'TIME_Wait' [-Wimplicit-function-declaration]
+   TIME_Wait(1000);
+   ^~~~~~~~~
+../src/play_module/Play.c:145:2: warning: implicit declaration of function 'UI_PlayResultScreen' [-Wimplicit-function-declaration]
+  UI_PlayResultScreen(gameState, player);
+  ^~~~~~~~~~~~~~~~~~~
+At top level:
+../src/Utils/EventManager.c:7:12: warning: 'waitBeforeKeyTime' defined but not used [-Wunused-variable]
+ static int waitBeforeKeyTime = 0;
+            ^~~~~~~~~~~~~~~~~
+../src/config_module/Config.c: In function 'configureClock':
+../src/config_module/Config.c:13:3: warning: implicit declaration of function 'UI_ClearScreen' [-Wimplicit-function-declaration]
+   UI_ClearScreen();
+   ^~~~~~~~~~~~~~
+../src/config_module/Config.c:15:5: warning: implicit declaration of function 'UI_DrawConfigClock' [-Wimplicit-function-declaration]
+     UI_DrawConfigClock(&dateTime, state);
+     ^~~~~~~~~~~~~~~~~~
+../src/config_module/Config.c: In function 'configureDate':
+../src/config_module/Config.c:68:5: warning: implicit declaration of function 'UI_DrawConfigDate' [-Wimplicit-function-declaration]
+     UI_DrawConfigDate(&dateTime, state);
+     ^~~~~~~~~~~~~~~~~
+../src/config_module/Config.c: In function 'deleteResults':
+../src/config_module/Config.c:119:3: warning: implicit declaration of function 'UI_DrawConfigDeleteResults' [-Wimplicit-function-declaration]
+   UI_DrawConfigDeleteResults();
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/config_module/Config.c:123:7: warning: implicit declaration of function 'STORAGE_ClearGameResults' [-Wimplicit-function-declaration]
+       STORAGE_ClearGameResults();
+       ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/config_module/Config.c: In function 'CONFIG_StartConfiguration':
+../src/config_module/Config.c:135:5: warning: implicit declaration of function 'UI_DrawMainConfigScreen' [-Wimplicit-function-declaration]
+     UI_DrawMainConfigScreen();
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/config_module/Config.c:151:9: warning: implicit declaration of function 'TIME_SetDateTime' [-Wimplicit-function-declaration]
+         TIME_SetDateTime(&dateTime);
+         ^~~~~~~~~~~~~~~~
+Finished building: ../src/Utils/EventManager.c
+ 
+Finished building: ../src/play_module/Play.c
+ 
+Building file: ../src/Utils/TimeManager.c
+Building file: ../src/Utils/UI_Manager.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Utils/TimeManager.d" -MT"src/Utils/TimeManager.o" -MT"src/Utils/TimeManager.d" -o "src/Utils/TimeManager.o" "../src/Utils/TimeManager.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Utils/UI_Manager.d" -MT"src/Utils/UI_Manager.o" -MT"src/Utils/UI_Manager.d" -o "src/Utils/UI_Manager.o" "../src/Utils/UI_Manager.c"
+Finished building: ../src/config_module/Config.c
+ 
+Building file: ../src/App.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/App.d" -MT"src/App.o" -MT"src/App.d" -o "src/App.o" "../src/App.c"
+../src/Utils/TimeManager.c: In function 'TIME_Init':
+../src/Utils/TimeManager.c:6:3: warning: implicit declaration of function 'TIMER0_Init' [-Wimplicit-function-declaration]
+   TIMER0_Init(timerFreq);
+   ^~~~~~~~~~~
+../src/Utils/TimeManager.c: In function 'TIME_Wait':
+../src/Utils/TimeManager.c:20:14: warning: implicit declaration of function 'TIMER0_GetValue' [-Wimplicit-function-declaration]
+   int time = TIMER0_GetValue();
+              ^~~~~~~~~~~~~~~
+../src/Utils/TimeManager.c:21:9: warning: implicit declaration of function 'TIMER0_Elapse' [-Wimplicit-function-declaration]
+   while(TIMER0_Elapse(time) < waitTime);
+         ^~~~~~~~~~~~~
+../src/Utils/UI_Manager.c: In function 'UI_SetupLCD':
+../src/Utils/UI_Manager.c:28:2: warning: implicit declaration of function 'SPI_BeginTransfer' [-Wimplicit-function-declaration]
+  SPI_BeginTransfer(LCD_CS);
+  ^~~~~~~~~~~~~~~~~
+../src/Utils/UI_Manager.c:30:2: warning: implicit declaration of function 'SPI_EndTransfer' [-Wimplicit-function-declaration]
+  SPI_EndTransfer(LCD_CS);
+  ^~~~~~~~~~~~~~~
+../src/Utils/UI_Manager.c: In function 'UI_DrawPlayerTurn':
+../src/Utils/UI_Manager.c:225:6: warning: type of 'player' defaults to 'int' [-Wimplicit-int]
+ void UI_DrawPlayerTurn(player, invalidPlay){
+      ^~~~~~~~~~~~~~~~~
+../src/Utils/UI_Manager.c:225:6: warning: type of 'invalidPlay' defaults to 'int' [-Wimplicit-int]
+../src/Utils/UI_Manager.c:234:5: warning: implicit declaration of function 'TIME_Wait' [-Wimplicit-function-declaration]
+     TIME_Wait(1000);
+     ^~~~~~~~~
+../src/Utils/UI_Manager.c:227:7: warning: unused variable 'time' [-Wunused-variable]
+   int time;
+       ^~~~
+Finished building: ../src/Utils/TimeManager.c
+ 
+Building file: ../src/cr_startup_lpc17.c
+In file included from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/portable.h:320:0,
+                 from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/FreeRTOS.h:83,
+                 from ../src/App.c:6:
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h: In function 'ucPortCountLeadingZeros':
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
+  __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~
+Invoking: MCU C Compiler
+../src/App.c: In function 'startProcess':
+../src/App.c:25:15: warning: implicit declaration of function 'TIME_GetDateTime' [-Wimplicit-function-declaration]
+    dateTime = TIME_GetDateTime();
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc17.d" -MT"src/cr_startup_lpc17.o" -MT"src/cr_startup_lpc17.d" -o "src/cr_startup_lpc17.o" "../src/cr_startup_lpc17.c"
+               ^~~~~~~~~~~~~~~~
+../src/App.c:25:13: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    dateTime = TIME_GetDateTime();
+             ^
+../src/App.c:27:4: warning: implicit declaration of function 'UI_DrawIdleScreen' [-Wimplicit-function-declaration]
+    UI_DrawIdleScreen(dateTime, &players);
+    ^~~~~~~~~~~~~~~~~
+../src/App.c:32:6: warning: implicit declaration of function 'CONFIG_StartConfiguration' [-Wimplicit-function-declaration]
+      CONFIG_StartConfiguration();
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/App.c:35:6: warning: implicit declaration of function 'startGame' [-Wimplicit-function-declaration]
+      startGame(&players);
+      ^~~~~~~~~
+In file included from ../src/App.c:7:0:
+../src/App.c: In function 'main':
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/task.h:294:134: warning: pointer targets in passing argument 2 of 'xTaskGenericCreate' differ in signedness [-Wpointer-sign]
+ #define xTaskCreate( pvTaskCode, pcName, usStackDepth, pvParameters, uxPriority, pxCreatedTask ) xTaskGenericCreate( ( pvTaskCode ), ( pcName ), ( usStackDepth ), ( pvParameters ), ( uxPriority ), ( pxCreatedTask ), ( NULL ), ( NULL ) )
+                                                                                                                                      ^
+../src/App.c:42:2: note: in expansion of macro 'xTaskCreate'
+  xTaskCreate(startProcess, "mainProcess",
+  ^~~~~~~~~~~
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/task.h:1310:22: note: expected 'const signed char * const' but argument is of type 'char *'
+ signed portBASE_TYPE xTaskGenericCreate( pdTASK_CODE pxTaskCode, const signed char * const pcName, unsigned short usStackDepth, void *pvParameters, unsigned portBASE_TYPE uxPriority, xTaskHandle *pxCreatedTask, portSTACK_TYPE *puxStackBuffer, const xMemoryRegion * const xRegions ) PRIVILEGED_FUNCTION;
+                      ^~~~~~~~~~~~~~~~~~
+../src/App.c: In function 'initialize':
+../src/App.c:56:2: warning: implicit declaration of function 'TIME_Init' [-Wimplicit-function-declaration]
+  TIME_Init(TIMER_FREQUENCY);
+  ^~~~~~~~~
+../src/App.c:57:2: warning: implicit declaration of function 'UI_SetupLCD' [-Wimplicit-function-declaration]
+  UI_SetupLCD();
+  ^~~~~~~~~~~
+In file included from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/portable.h:320:0,
+                 from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/FreeRTOS.h:83,
+                 from ../src/App.c:6:
+At top level:
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
+  __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
+Finished building: ../src/App.c
+Finished building: ../src/Utils/UI_Manager.c
+ 
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/cr_startup_lpc17.c
+ 
+Finished building: ../src/crp.c
+ 
+Building target: Project_SE1.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/Debug" -L"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/Debug" -L"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/Debug" -Xlinker -Map="Project_SE1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Project_SE1_Debug.ld" -o "Project_SE1.axf"  ./src/play_module/Play.o  ./src/config_module/Config.o  ./src/Utils/EventManager.o ./src/Utils/TimeManager.o ./src/Utils/UI_Manager.o  ./src/App.o ./src/cr_startup_lpc17.o ./src/crp.o   -lCMSIS_CORE_LPC17xx -lFreeRTOS_Library -lLPC1769
+Memory region         Used Size  Region Size  %age Used
+       MFlash512:       16480 B       512 KB      3.14%
+        RamLoc32:        6256 B        32 KB     19.09%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: Project_SE1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Project_SE1.axf"; # arm-none-eabi-objcopy -v -O binary "Project_SE1.axf" "Project_SE1.bin" ; # checksum -p LPC1769 -d "Project_SE1.bin";
+   text	   data	    bss	    dec	    hex	filename
+  16308	    172	   6080	  22560	   5820	Project_SE1.axf
+ 
 
-18:13:36 Build Finished (took 83ms)
+16:27:13 Build Finished (took 464ms)
 

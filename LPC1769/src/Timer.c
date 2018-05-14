@@ -1,5 +1,5 @@
+#include <Timer.h>
 #include "LPC17xx.h"
-#include "timer.h"
 
 #define TIMER_ON 1
 #define TIMER_OFF 2

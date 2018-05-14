@@ -1,6 +1,6 @@
+#include <Timer.h>
 #include "lcd.h"
 #include "gpio.h"
-#include "timer.h"
 #include "lab5.h"
 #include "LPC17xx.h"
 

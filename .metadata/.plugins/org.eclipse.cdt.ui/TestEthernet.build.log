@@ -1,6 +1,11 @@
-18:31:15 **** Incremental Build of configuration Debug for project TestEthernet ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
+17:11:17 **** Incremental Build of configuration Debug for project TestEthernet ****
+make -r -j3 all 
+Building target: TestEthernet.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/Debug" -L"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/Debug" -Xlinker -Map="TestEthernet.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "TestEthernet_Debug.ld" -o "TestEthernet.axf"  ./src/uip/psock.o ./src/uip/uip-fw.o ./src/uip/uip-neighbor.o ./src/uip/uip-split.o ./src/uip/uip.o ./src/uip/uip_arp.o ./src/uip/uiplib.o  ./src/apps/webserver/http-strings.o ./src/apps/webserver/httpd-cgi.o ./src/apps/webserver/httpd-fs.o ./src/apps/webserver/httpd.o  ./src/TestEthernet.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   -lCMSIS_CORE_LPC17xx -lLPC1769
+/Applications/MCUXpressoIDE_10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: cannot find -lLPC1769
+collect2: error: ld returned 1 exit status
+make: *** [TestEthernet.axf] Error 1
 
-18:31:15 Build Finished (took 125ms)
+17:11:17 Build Finished (took 91ms)
 

@@ -2,9 +2,9 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="com.crt.advproject.config.lib.debug.596234636;com.crt.advproject.config.lib.debug.596234636.;com.crt.advproject.gcc.lib.debug.446448073;com.crt.advproject.compiler.input.1300373880">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/lib/gcc/arm-none-eabi/6.3.1/include"/>
-<includePath path="c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/lib/gcc/arm-none-eabi/6.3.1/include-fixed"/>
-<includePath path="c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/arm-none-eabi/include"/>
+<includePath path="/Applications/MCUXpressoIDE_10.1.1_606/ide/tools/lib/gcc/arm-none-eabi/6.3.1/include"/>
+<includePath path="/Applications/MCUXpressoIDE_10.1.1_606/ide/tools/lib/gcc/arm-none-eabi/6.3.1/include-fixed"/>
+<includePath path="/Applications/MCUXpressoIDE_10.1.1_606/ide/tools/arm-none-eabi/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_VERSION__=201112L"/>
 <definedSymbol symbol="__STDC_UTF_16__=1"/>
@@ -353,9 +353,9 @@
 </instance>
 <instance id="com.crt.advproject.config.lib.debug.596234636;com.crt.advproject.config.lib.debug.596234636.;com.crt.advproject.gas.lib.debug.531598676;com.crt.advproject.assembler.input.1264707905">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/lib/gcc/arm-none-eabi/6.3.1/include"/>
-<includePath path="c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/lib/gcc/arm-none-eabi/6.3.1/include-fixed"/>
-<includePath path="c:/nxp/mcuxpressoide_10.1.1_606/ide/tools/arm-none-eabi/include"/>
+<includePath path="/Applications/MCUXpressoIDE_10.1.1_606/ide/tools/lib/gcc/arm-none-eabi/6.3.1/include"/>
+<includePath path="/Applications/MCUXpressoIDE_10.1.1_606/ide/tools/lib/gcc/arm-none-eabi/6.3.1/include-fixed"/>
+<includePath path="/Applications/MCUXpressoIDE_10.1.1_606/ide/tools/arm-none-eabi/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_VERSION__=201112L"/>
 <definedSymbol symbol="__STDC_UTF_16__=1"/>
