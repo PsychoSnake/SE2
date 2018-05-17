@@ -192,10 +192,12 @@ webclient_timedout(void)
 {
   printf("Webclient: connection timed out\n");
 }
+extern void *uip_sappdata;
+extern short uip_slen;
 void
 webclient_connected(void)
 {
-  printf("Webclient: connected, waiting for data...\n");
+	Ethernet_WriteFrame(uip_sappdata, uip_slen);
 }
 void
 webclient_datahandler(char *data, u16_t len)

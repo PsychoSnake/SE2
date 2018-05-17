@@ -114,15 +114,6 @@ webclient_init(void)
 	Ethernet_Init();
 }
 /*-----------------------------------------------------------------------------------*/
-
-extern void *uip_sappdata;
-extern short uip_slen;
-void
-webclient_connected(void)
-{
-	Ethernet_WriteFrame(uip_sappdata, uip_slen);
-}
-/*-----------------------------------------------------------------------------------*/
 static void
 init_connection(void)
 {
