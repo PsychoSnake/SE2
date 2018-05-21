@@ -178,7 +178,7 @@ void webclient_timedout(void) {
 extern void *uip_sappdata;
 extern short uip_slen;
 void webclient_connected(void) {
-	Ethernet_WriteFrame(uip_sappdata, uip_slen);
+	printf("Webclient: Connection called.\n");
 }
 void webclient_datahandler(char *data, u16_t len) {
 	printf("Webclient: got %d bytes of data.\n", len);

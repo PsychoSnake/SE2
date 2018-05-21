@@ -5,20 +5,14 @@
 			<provider id="com.crt.advproject.GCCBuildCommandParser">
 				<language id="org.eclipse.cdt.core.gcc">
 					<resource project-relative-path="src/TestEthernet.c">
-						<entry kind="includePath" name="/LPC1769/src/apps/dhcpc">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						<entry kind="includePath" name="/${ProjName}/src/uip">
+							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/LPC1769/src/apps/resolv">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/LPC1769/src/apps/webclient">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
-						<entry kind="includePath" name="/LPC1769/src/apps/webserver">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
-						<entry kind="includePath" name="/LPC1769/src/uip">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
+							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
@@ -40,7 +34,36 @@
 						<entry kind="includePath" name="/${ProjName}/src/uip">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/${ProjName}/src/apps/webserver">
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/LPC1769/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC17XX__" value=""/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/apps/webclient/webclient-strings.c">
+						<entry kind="includePath" name="/${ProjName}/src/uip">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
@@ -60,20 +83,14 @@
 						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
 					</resource>
 					<resource project-relative-path="src/crp.c">
-						<entry kind="includePath" name="/LPC1769/src/apps/dhcpc">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						<entry kind="includePath" name="/${ProjName}/src/uip">
+							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/LPC1769/src/apps/resolv">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/LPC1769/src/apps/webclient">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
-						<entry kind="includePath" name="/LPC1769/src/apps/webserver">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
-						<entry kind="includePath" name="/LPC1769/src/uip">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
+							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
@@ -118,7 +135,10 @@
 						<entry kind="includePath" name="/${ProjName}/src/uip">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/${ProjName}/src/apps/webserver">
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
@@ -187,7 +207,10 @@
 						<entry kind="includePath" name="/${ProjName}/src/uip">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/${ProjName}/src/apps/webserver">
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
@@ -210,7 +233,36 @@
 						<entry kind="includePath" name="/${ProjName}/src/uip">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/${ProjName}/src/apps/webserver">
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/LPC1769/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC17XX__" value=""/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/clock-arch.c">
+						<entry kind="includePath" name="/${ProjName}/src/uip">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
@@ -233,7 +285,10 @@
 						<entry kind="includePath" name="/${ProjName}/src/uip">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/${ProjName}/src/apps/webserver">
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
@@ -302,7 +357,36 @@
 						<entry kind="includePath" name="/${ProjName}/src/uip">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/${ProjName}/src/apps/webserver">
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/LPC1769/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC17XX__" value=""/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/apps/resolv/resolv.c">
+						<entry kind="includePath" name="/${ProjName}/src/uip">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
@@ -322,20 +406,14 @@
 						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
 					</resource>
 					<resource project-relative-path="src/cr_startup_lpc175x_6x.c">
-						<entry kind="includePath" name="/LPC1769/src/apps/dhcpc">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						<entry kind="includePath" name="/${ProjName}/src/uip">
+							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/LPC1769/src/apps/resolv">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/LPC1769/src/apps/webclient">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
-						<entry kind="includePath" name="/LPC1769/src/apps/webserver">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
-						<entry kind="includePath" name="/LPC1769/src/uip">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
+							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
@@ -357,7 +435,36 @@
 						<entry kind="includePath" name="/${ProjName}/src/uip">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/${ProjName}/src/apps/webserver">
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/LPC1769/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC17XX__" value=""/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/apps/webclient/webclient.c">
+						<entry kind="includePath" name="/${ProjName}/src/uip">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/webclient">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/src/apps/resolv">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
