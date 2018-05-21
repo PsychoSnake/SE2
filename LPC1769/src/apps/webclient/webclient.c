@@ -111,7 +111,7 @@ webclient_port(void)
 void
 webclient_init(void)
 {
-	Ethernet_Init();
+	//Ethernet_Init();
 }
 /*-----------------------------------------------------------------------------------*/
 static void
