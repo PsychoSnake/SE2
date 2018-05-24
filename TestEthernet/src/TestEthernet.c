@@ -47,7 +47,7 @@ int main(void) {
 
 	uip_ipaddr(ipaddr, 192, 168, 0, 3);
 	uip_sethostaddr(ipaddr);
-	uip_ipaddr(ipaddr, 192, 168, 0, 2);
+	uip_ipaddr(ipaddr, 192, 168, 0, 10);
 	uip_setdraddr(ipaddr);
 	uip_ipaddr(ipaddr, 255, 255, 255, 0);
 	uip_setnetmask(ipaddr);

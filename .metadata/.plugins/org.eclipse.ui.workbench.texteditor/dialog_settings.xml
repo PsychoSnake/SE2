@@ -6,29 +6,29 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="uip_udp_conn" key="selection"/>
+		<item value="STATION" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="station"/>
+			<item value="uip_fix"/>
+			<item value="uipfix"/>
+			<item value="uip_ethernet"/>
 			<item value="uip_udp_conn"/>
 			<item value="return resolv_conn-&gt;ripaddr;"/>
 			<item value="timer"/>
 			<item value="uip_appdata"/>
-			<item value="senddata"/>
-			<item value="send_data"/>
-			<item value="webclient_connected"/>
-			<item value="imer"/>
 		</list>
 		<list key="replacehistory">
 			<item value="LPC_RTC"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="312" key="DIALOG_WIDTH"/>
-		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText" key="DIALOG_FONT_NAME"/>
-		<item value="427" key="DIALOG_HEIGHT"/>
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
 		<item value="801" key="DIALOG_X_ORIGIN"/>
 		<item value="222" key="DIALOG_Y_ORIGIN"/>
 	</section>
