@@ -88,19 +88,15 @@
 #define MAC1_SOFT_RESET       		 0x00008000  /* Soft Reset MAC                    */
 #define MAC1_PASS_ALL_RECEIVE_FRAMES 1<<1
 
-#define COMMAND_REGISTER_RESET       0x00000008  /* Reset Host Registers              */
-#define COMMAND_TX_RESET           	 0x00000010  /* Reset Transmit Datapath           */
-#define COMMAND_RX_RESET           	 0x00000020  /* Reset Receive Datapath            */
-#define CR_FULL_DUP         		 0x00000400  /* Full Duplex                       */
+#define COMMAND_REGISTER_RESET          0x00000008  /* Reset Host Registers              */
+#define COMMAND_TX_RESET           0x00000010  /* Reset Transmit Datapath           */
+#define COMMAND_RX_RESET           0x00000020  /* Reset Receive Datapath            */
 
 /* RX Descriptor Control Word */
 #define RCTRL_INT           0x80000000  /* Generate RxDone Interrupt         */
 
 #define RX_CONTROL_SIZE_MASK 0x7FF
 
-/* Back-to-Back Inter-Packet-Gap Register */
-#define IPGT_FULL_DUP       0x00000015  /* Recommended value for Full Duplex */
-#define IPGT_HALF_DUP       0x00000012  /* Recommended value for Half Duplex */
 
 
 
