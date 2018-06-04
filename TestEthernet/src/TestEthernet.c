@@ -24,6 +24,7 @@
 #include "uip_arp.h"
 #include "Ethernet.h"
 #include <Timer.h>
+//#include "tapdev.h"
 #define CLOCK_SECOND 1000
 
 #define BUF ((struct uip_eth_hdr *)&uip_buf[0])
@@ -43,11 +44,13 @@ int main(void) {
 	arp_timer = TIMER0_GetValue();
 
 	Ethernet_Init();
+	//tapdev_init();
+
 	uip_init();
 
 	uip_ipaddr(ipaddr, 192, 168, 0, 3);
 	uip_sethostaddr(ipaddr);
-	uip_ipaddr(ipaddr, 192, 168, 0, 10);
+	uip_ipaddr(ipaddr, 192, 168, 0, 2);
 	uip_setdraddr(ipaddr);
 	uip_ipaddr(ipaddr, 255, 255, 255, 0);
 	uip_setnetmask(ipaddr);

@@ -6,20 +6,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="STATION" key="selection"/>
+		<item value="fix" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="fix"/>
+			<item value="fixed"/>
+			<item value="fixedeth"/>
+			<item value="fixeth"/>
+			<item value="eth"/>
 			<item value="station"/>
 			<item value="uip_fix"/>
 			<item value="uipfix"/>
-			<item value="uip_ethernet"/>
-			<item value="uip_udp_conn"/>
-			<item value="return resolv_conn-&gt;ripaddr;"/>
-			<item value="timer"/>
-			<item value="uip_appdata"/>
 		</list>
 		<list key="replacehistory">
 			<item value="LPC_RTC"/>

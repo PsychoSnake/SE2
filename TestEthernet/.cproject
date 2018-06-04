@@ -282,5 +282,12 @@
 		<boardId>LPCXpresso1769-CD</boardId>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/TestEthernet"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/TestEthernet"/>
+		</configuration>
+	</storageModule>
 </cproject>

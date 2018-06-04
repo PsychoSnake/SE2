@@ -33,21 +33,14 @@
 
 #define A_100BASE 1<<8
 #define A_100BASE_TX_FULL_DUPLEX 1<<8
-/*
+
+
 #define UIP_ETHADDR0 0x0
 #define	UIP_ETHADDR1 0x0
 #define	UIP_ETHADDR2 0x0
 #define	UIP_ETHADDR3 0x0
 #define	UIP_ETHADDR4 0x0
-#define	UIP_ETHADDR5 0x0*/
-
-
-#define UIP_ETHADDR0 0x1
-#define	UIP_ETHADDR1 0x2
-#define	UIP_ETHADDR2 0x3
-#define	UIP_ETHADDR3 0x4
-#define	UIP_ETHADDR4 0x5
-#define	UIP_ETHADDR5 0x6
+#define	UIP_ETHADDR5 0x0
 
 #define BASIC_CONTROL_REGISTER 0
 #define BASIC_STATUS_REGISTER 1
