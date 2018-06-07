@@ -1,6 +1,6 @@
-18:38:11 **** Incremental Build of configuration Debug for project TestEthernet ****
+15:57:45 **** Incremental Build of configuration Debug for project TestEthernet ****
 make -r -j4 all 
 make: Nothing to be done for `all'.
 
-18:38:11 Build Finished (took 110ms)
+15:57:45 Build Finished (took 110ms)
 

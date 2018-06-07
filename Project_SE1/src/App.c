@@ -2,6 +2,7 @@
 #include "event.h"
 #include "rtc.h"
 #include "eeprom.h"
+#include "UI.h"
 
 #include "FreeRTOS.h"
 #include "task.h"
@@ -18,13 +19,14 @@ void initialize();
 
 
 void startProcess(){
-	initialize();
+
 		unsigned int event;
 		struct tm *dateTime;
 		while(1){
 			dateTime = TIME_GetDateTime();
 			STORAGE_LoadGameResults(&players);
-			UI_DrawIdleScreen(dateTime, &players);
+			int aux[2] = {(int) dateTime, (int) &players};
+			UI_AddMessage(UI_DrawIdleScreen, aux);
 			event = EVENT_GetIdleEvent();
 
 			switch(event){
@@ -39,6 +41,7 @@ void startProcess(){
 }
 
 int main(){
+	initialize();
 	xTaskCreate(startProcess, "mainProcess",
 		 configMINIMAL_STACK_SIZE, 0, 1 , 0 );
 	vTaskStartScheduler();
@@ -54,6 +57,6 @@ void initialize(){
 	//LED_Init(LED_PIN, 0);
 	EVENT_Init();
 	TIME_Init(TIMER_FREQUENCY);
-	UI_SetupLCD();
+	UI_Init();
 	EEPROM_Init();
 }

@@ -5,7 +5,7 @@
  * Generated linker script file for LPC1768
  * Created from library.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * MCUXpresso IDE v10.1.1 [Build 606] [2018-01-02]  on May 7, 2018 5:07:02 PM
+ * MCUXpresso IDE v10.1.1 [Build 606] [2018-01-02]  on Jun 7, 2018 4:16:21 PM
  */
 
 GROUP (

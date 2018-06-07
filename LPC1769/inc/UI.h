@@ -26,7 +26,6 @@
 #define _UI_H_
 
 #include "lcd.h"
-#include "lpc2106.h"
 #include "storage.h"
 
 /** @defgroup UI UI
@@ -59,13 +58,13 @@ void UI_DrawGameGrid(struct tm *dateTime);
  * @param	players: current game results
  * @return  Nothing
  */
-void UI_DrawIdleScreen(struct tm *dateTime, struct players_info *players);
+void UI_DrawIdleScreen(void *params);
 
  /**
  * @brief	Draws the configuration screen
  * @return  Nothing
  */
-void UI_DrawMainConfigScreen();
+void UI_DrawMainConfigScreen(void *params);
 
  /**
  * @brief	Draws the screen where the user will set the clock
@@ -73,7 +72,7 @@ void UI_DrawMainConfigScreen();
  * @param	ind: the element that is being edited (0->hour ; 1->minutes)
  * @return  Nothing
  */
-void UI_DrawConfigClock(struct tm *dateTime, int ind);
+void UI_DrawConfigClock(void *params);
 
  /**
  * @brief	Draws the screen where the user will set the date
@@ -81,13 +80,13 @@ void UI_DrawConfigClock(struct tm *dateTime, int ind);
  * @param	ind: the element that is being edited (0->day ; 1->month ; 2->year)
  * @return  Nothing
  */
-void UI_DrawConfigDate(struct tm *dateTime, int ind);
+void UI_DrawConfigDate(void *params);
 
  /**
  * @brief	Draws the screen where the user confirms the game results deletion
  * @return  Nothing
  */
-void UI_DrawConfigDeleteResults();
+void UI_DrawConfigDeleteResults(void *params);
 
  /**
  * @brief	Draws the result screen of the game
@@ -95,13 +94,21 @@ void UI_DrawConfigDeleteResults();
  * @param	player: the player related to the end game in case of the win
  * @return  Nothing
  */
-void UI_PlayResultScreen(int state, int player);
+void UI_PlayResultScreen(void *params);
 
  /**
  * @brief	Clears the screen
  * @return  Nothing
  */
-void UI_ClearScreen();
+void UI_ClearScreen(void *params);
+
+void UI_Write(void *params);
+
+void UI_DrawPlayerTurn(void *params);
+
+void UI_Init();
+
+void UI_AddMessage(void* function, void* params);
 
 /**
  * @}
