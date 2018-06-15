@@ -1,6 +1,7 @@
-18:16:49 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
-make -r all 
-make: Nothing to be done for `all'.
+19:27:13 **** Clean-only build of configuration Debug for project FreeRTOS_Library ****
+make -r clean 
+rm -rf  ./portable/heap_4.o ./portable/port.o  ./demo_code/basic_io.o ./demo_code/consoleprint.o  ./list.o ./queue.o ./tasks.o ./timers.o  ./portable/heap_4.d ./portable/port.d  ./demo_code/basic_io.d ./demo_code/consoleprint.d  ./list.d ./queue.d ./tasks.d ./timers.d  libFreeRTOS_Library.a
+ 
 
-18:16:49 Build Finished (took 110ms)
+19:27:13 Build Finished (took 148ms)
 

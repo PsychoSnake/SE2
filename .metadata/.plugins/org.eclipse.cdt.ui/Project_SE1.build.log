@@ -1,6 +1,7 @@
-18:16:52 **** Incremental Build of configuration Debug for project Project_SE1 ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
+19:27:13 **** Clean-only build of configuration Debug for project Project_SE1 ****
+make -r -j4 clean 
+rm -rf  ./src/play_module/Play.o  ./src/config_module/Config.o  ./src/Utils/EventManager.o ./src/Utils/TimeManager.o ./src/Utils/UI_Manager.o ./src/Utils/storage.o  ./src/App.o ./src/cr_startup_lpc17.o ./src/crp.o  ./src/play_module/Play.d  ./src/config_module/Config.d  ./src/Utils/EventManager.d ./src/Utils/TimeManager.d ./src/Utils/UI_Manager.d ./src/Utils/storage.d  ./src/App.d ./src/cr_startup_lpc17.d ./src/crp.d  Project_SE1.axf
+ 
 
-18:16:52 Build Finished (took 110ms)
+19:27:14 Build Finished (took 547ms)
 

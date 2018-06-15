@@ -1,6 +1,7 @@
-18:16:49 **** Incremental Build of configuration Debug for project LPC1769 ****
-make -r all 
-make: Nothing to be done for `all'.
+19:27:13 **** Clean-only build of configuration Debug for project LPC1769 ****
+make -r clean 
+rm -rf  ./src/Ethernet.o ./src/Flash.o ./src/GPIO.o ./src/I2C.o ./src/KeyPad.o ./src/LCD.o ./src/RTC.o ./src/SPI.o ./src/Timer.o ./src/eeprom.o ./src/lab5_font.o  ./src/Ethernet.d ./src/Flash.d ./src/GPIO.d ./src/I2C.d ./src/KeyPad.d ./src/LCD.d ./src/RTC.d ./src/SPI.d ./src/Timer.d ./src/eeprom.d ./src/lab5_font.d  libLPC1769.a
+ 
 
-18:16:49 Build Finished (took 94ms)
+19:27:13 Build Finished (took 201ms)
 

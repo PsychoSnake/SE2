@@ -1,6 +1,7 @@
-15:57:45 **** Incremental Build of configuration Debug for project TestEthernet ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
+18:08:15 **** Clean-only build of configuration Debug for project TestEthernet ****
+make -r -j4 clean 
+rm -rf  ./src/uip/psock.o ./src/uip/uip-fw.o ./src/uip/uip-neighbor.o ./src/uip/uip-split.o ./src/uip/uip.o ./src/uip/uip_arp.o ./src/uip/uiplib.o  ./src/apps/webclient/webclient-strings.o ./src/apps/webclient/webclient.o  ./src/apps/resolv/resolv.o  ./src/TestEthernet.o ./src/clock-arch.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o  ./src/uip/psock.d ./src/uip/uip-fw.d ./src/uip/uip-neighbor.d ./src/uip/uip-split.d ./src/uip/uip.d ./src/uip/uip_arp.d ./src/uip/uiplib.d  ./src/apps/webclient/webclient-strings.d ./src/apps/webclient/webclient.d  ./src/apps/resolv/resolv.d  ./src/TestEthernet.d ./src/clock-arch.d ./src/cr_startup_lpc175x_6x.d ./src/crp.d  TestEthernet.axf
+ 
 
-15:57:45 Build Finished (took 110ms)
+18:08:15 Build Finished (took 872ms)
 
