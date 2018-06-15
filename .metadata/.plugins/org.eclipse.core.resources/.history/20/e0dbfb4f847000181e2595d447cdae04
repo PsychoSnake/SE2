@@ -24,7 +24,7 @@
 
 /** @defgroup eeprom eeprom
  * @ingroup eeprom
- * This package provides the capability to write and read from peripheral 24LC256 (eeprom).
+ * This package provides the capabilty to write and read from peripheral 24LC256 (eeprom).
  * @{
  */
 

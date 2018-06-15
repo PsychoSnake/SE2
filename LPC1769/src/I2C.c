@@ -148,7 +148,6 @@ void I2C_Start(){
 	  state = I2C_STARTED;
 }
 
-void I2C_End();
 
 
 

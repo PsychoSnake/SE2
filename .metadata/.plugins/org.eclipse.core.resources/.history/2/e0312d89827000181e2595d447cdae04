@@ -24,14 +24,14 @@
 
 /** @defgroup I2C I2C
  * @ingroup I2C
- * This package provides the capability to communicate with a group of devices using I2C protocol.
+ * This package provides the capabilty to communicate with a group of devices using I2C protocol.
  * @{
  */
 
 #ifndef _I2C_H_
 #define _I2C_H_
 
-#define I2C_IDLE              0		/* I2C status code operation  */
+#define I2C_IDLE              0
 #define I2C_STARTED           1
 #define I2C_RESTARTED         2
 #define I2C_REPEATED_START    3
@@ -44,6 +44,7 @@
 #define I2C_ARBITRATION_LOST  10
 #define I2C_TIME_OUT          11
 #define I2C_OK                12
+
 
 #define I2C_BUFFER_SIZE 	64 		/* max supported bytes by EEPROM */
 
@@ -82,11 +83,3 @@ void I2C_Init();
 void I2C_Start();
 
 #endif
-/**
-* @}
-*/
-
-/**
-* @}
-*/
-
