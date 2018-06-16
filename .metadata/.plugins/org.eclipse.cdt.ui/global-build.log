@@ -1,14 +1,14 @@
-11:18:09 **** Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+17:25:22 **** Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 Building file: ../src/system_LPC17xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC17xx -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC17xx.d" -MT"src/system_LPC17xx.o" -MT"src/system_LPC17xx.d" -o "src/system_LPC17xx.o" "../src/system_LPC17xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC17xx -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC17xx.d" -MT"src/system_LPC17xx.o" -MT"src/system_LPC17xx.d" -o "src/system_LPC17xx.o" "../src/system_LPC17xx.c"
 Finished building: ../src/system_LPC17xx.c
  
 Building target: libCMSIS_CORE_LPC17xx.a
 Invoking: MCU Archiver
 arm-none-eabi-ar -r  "libCMSIS_CORE_LPC17xx.a"  ./src/system_LPC17xx.o   
-c:\nxp\MCUXpressoIDE_10.1.1_606\ide\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC17xx.a
+arm-none-eabi-ar: creating libCMSIS_CORE_LPC17xx.a
 Finished building target: libCMSIS_CORE_LPC17xx.a
  
 make --no-print-directory post-build
@@ -17,121 +17,121 @@ arm-none-eabi-size "libCMSIS_CORE_LPC17xx.a" ; # arm-none-eabi-objdump -h -S "li
    text	   data	    bss	    dec	    hex	filename
     404	      4	      0	    408	    198	system_LPC17xx.o (ex libCMSIS_CORE_LPC17xx.a)
  
-11:18:15 **** Build of configuration Debug for project FreeRTOS_Library ****
+17:25:22 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
 make -r all 
 Building file: ../portable/heap_4.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\Project_SE1\src" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"portable/heap_4.d" -MT"portable/heap_4.o" -MT"portable/heap_4.d" -o "portable/heap_4.o" "../portable/heap_4.c"
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
+arm-none-eabi-gcc -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/Project_SE1/src" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"portable/heap_4.d" -MT"portable/heap_4.o" -MT"portable/heap_4.d" -o "portable/heap_4.o" "../portable/heap_4.c"
+In file included from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/portable.h:320:0,
+                 from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/FreeRTOS.h:83,
                  from ../portable/heap_4.c:82:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h: In function 'ucPortCountLeadingZeros':
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
   __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
                                                           ^~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
 Finished building: ../portable/heap_4.c
  
 Building file: ../portable/port.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\Project_SE1\src" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"portable/port.d" -MT"portable/port.o" -MT"portable/port.d" -o "portable/port.o" "../portable/port.c"
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
+arm-none-eabi-gcc -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/Project_SE1/src" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"portable/port.d" -MT"portable/port.o" -MT"portable/port.d" -o "portable/port.o" "../portable/port.c"
+In file included from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/portable.h:320:0,
+                 from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/FreeRTOS.h:83,
                  from ../portable/port.c:72:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h: In function 'ucPortCountLeadingZeros':
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
   __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
                                                           ^~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
 Finished building: ../portable/port.c
  
 Building file: ../demo_code/basic_io.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\Project_SE1\src" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"demo_code/basic_io.d" -MT"demo_code/basic_io.o" -MT"demo_code/basic_io.d" -o "demo_code/basic_io.o" "../demo_code/basic_io.c"
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
+arm-none-eabi-gcc -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/Project_SE1/src" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"demo_code/basic_io.d" -MT"demo_code/basic_io.o" -MT"demo_code/basic_io.d" -o "demo_code/basic_io.o" "../demo_code/basic_io.c"
+In file included from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/portable.h:320:0,
+                 from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/FreeRTOS.h:83,
                  from ../demo_code/basic_io.c:35:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h: In function 'ucPortCountLeadingZeros':
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
   __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
                                                           ^~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
 Finished building: ../demo_code/basic_io.c
  
 Building file: ../demo_code/consoleprint.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\Project_SE1\src" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"demo_code/consoleprint.d" -MT"demo_code/consoleprint.o" -MT"demo_code/consoleprint.d" -o "demo_code/consoleprint.o" "../demo_code/consoleprint.c"
+arm-none-eabi-gcc -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/Project_SE1/src" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"demo_code/consoleprint.d" -MT"demo_code/consoleprint.o" -MT"demo_code/consoleprint.d" -o "demo_code/consoleprint.o" "../demo_code/consoleprint.c"
 Finished building: ../demo_code/consoleprint.c
  
 Building file: ../list.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\Project_SE1\src" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"list.d" -MT"list.o" -MT"list.d" -o "list.o" "../list.c"
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
+arm-none-eabi-gcc -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/Project_SE1/src" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"list.d" -MT"list.o" -MT"list.d" -o "list.o" "../list.c"
+In file included from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/portable.h:320:0,
+                 from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/FreeRTOS.h:83,
                  from ../list.c:69:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h: In function 'ucPortCountLeadingZeros':
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
   __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
                                                           ^~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
 Finished building: ../list.c
  
 Building file: ../queue.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\Project_SE1\src" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"queue.d" -MT"queue.o" -MT"queue.d" -o "queue.o" "../queue.c"
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
+arm-none-eabi-gcc -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/Project_SE1/src" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"queue.d" -MT"queue.o" -MT"queue.d" -o "queue.o" "../queue.c"
+In file included from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/portable.h:320:0,
+                 from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/FreeRTOS.h:83,
                  from ../queue.c:75:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h: In function 'ucPortCountLeadingZeros':
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
   __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
                                                           ^~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
 Finished building: ../queue.c
  
 Building file: ../tasks.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\Project_SE1\src" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"tasks.d" -MT"tasks.o" -MT"tasks.d" -o "tasks.o" "../tasks.c"
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
+arm-none-eabi-gcc -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/Project_SE1/src" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"tasks.d" -MT"tasks.o" -MT"tasks.d" -o "tasks.o" "../tasks.c"
+In file included from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/portable.h:320:0,
+                 from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/FreeRTOS.h:83,
                  from ../tasks.c:77:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h: In function 'ucPortCountLeadingZeros':
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
   __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
                                                           ^~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
 Finished building: ../tasks.c
  
 Building file: ../timers.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"C:\Faculdade\6_Semestre\SE2\SE2\Project_SE1\src" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"timers.d" -MT"timers.o" -MT"timers.d" -o "timers.o" "../timers.c"
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
+arm-none-eabi-gcc -D__REDLIB__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/Project_SE1/src" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"timers.d" -MT"timers.o" -MT"timers.d" -o "timers.o" "../timers.c"
+In file included from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/portable.h:320:0,
+                 from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/FreeRTOS.h:83,
                  from ../timers.c:72:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h: In function 'ucPortCountLeadingZeros':
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
   __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
                                                           ^~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
 Finished building: ../timers.c
  
 Building target: libFreeRTOS_Library.a
 Invoking: MCU Archiver
 arm-none-eabi-ar -r  "libFreeRTOS_Library.a"  ./portable/heap_4.o ./portable/port.o  ./demo_code/basic_io.o ./demo_code/consoleprint.o  ./list.o ./queue.o ./tasks.o ./timers.o   
-c:\nxp\MCUXpressoIDE_10.1.1_606\ide\tools\bin\arm-none-eabi-ar.exe: creating libFreeRTOS_Library.a
+arm-none-eabi-ar: creating libFreeRTOS_Library.a
 Finished building target: libFreeRTOS_Library.a
  
 make --no-print-directory post-build
@@ -147,11 +147,51 @@ arm-none-eabi-size libFreeRTOS_Library.a ; # arm-none-eabi-objdump -h -S libFree
    2925	      4	    256	   3185	    c71	tasks.o (ex libFreeRTOS_Library.a)
       0	      0	      0	      0	      0	timers.o (ex libFreeRTOS_Library.a)
  
-11:18:18 **** Build of configuration Debug for project LPC1769 ****
+17:25:23 **** Incremental Build of configuration Debug for project LPC1769 ****
 make -r all 
 Building file: ../src/Ethernet.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Ethernet.d" -MT"src/Ethernet.o" -MT"src/Ethernet.d" -o "src/Ethernet.o" "../src/Ethernet.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Ethernet.d" -MT"src/Ethernet.o" -MT"src/Ethernet.d" -o "src/Ethernet.o" "../src/Ethernet.c"
+In file included from ../src/Ethernet.c:2:0:
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc/Ethernet.h:31:0: error: unterminated #ifndef
+ #ifndef _ETHERNET_H_
+ 
+../src/Ethernet.c: In function 'Ethernet_Init':
+../src/Ethernet.c:130:6: warning: unused variable 'b' [-Wunused-variable]
+  int b = ReadFromPHY(2);
+      ^
+make: *** [src/Ethernet.o] Error 1
+17:26:19 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+make -r all 
+make: Nothing to be done for `all'.
+17:26:20 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
+make -r all 
+make: Nothing to be done for `all'.
+17:26:20 **** Incremental Build of configuration Debug for project LPC1769 ****
+make -r all 
+Building file: ../src/Ethernet.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Ethernet.d" -MT"src/Ethernet.o" -MT"src/Ethernet.d" -o "src/Ethernet.o" "../src/Ethernet.c"
+In file included from ../src/Ethernet.c:2:0:
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc/Ethernet.h:31:0: error: unterminated #ifndef
+ #ifndef _ETHERNET_H_
+ 
+../src/Ethernet.c: In function 'Ethernet_Init':
+../src/Ethernet.c:130:6: warning: unused variable 'b' [-Wunused-variable]
+  int b = ReadFromPHY(2);
+      ^
+make: *** [src/Ethernet.o] Error 1
+17:26:33 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+make -r all 
+make: Nothing to be done for `all'.
+17:26:34 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
+make -r all 
+make: Nothing to be done for `all'.
+17:26:34 **** Incremental Build of configuration Debug for project LPC1769 ****
+make -r all 
+Building file: ../src/Ethernet.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Ethernet.d" -MT"src/Ethernet.o" -MT"src/Ethernet.d" -o "src/Ethernet.o" "../src/Ethernet.c"
 ../src/Ethernet.c: In function 'Ethernet_Init':
 ../src/Ethernet.c:130:6: warning: unused variable 'b' [-Wunused-variable]
   int b = ReadFromPHY(2);
@@ -160,7 +200,7 @@ Finished building: ../src/Ethernet.c
  
 Building file: ../src/Flash.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Flash.d" -MT"src/Flash.o" -MT"src/Flash.d" -o "src/Flash.o" "../src/Flash.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Flash.d" -MT"src/Flash.o" -MT"src/Flash.d" -o "src/Flash.o" "../src/Flash.c"
 ../src/Flash.c: In function 'FLASH_WriteData':
 ../src/Flash.c:26:17: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
   iap_command[1] = dstAddr;
@@ -172,23 +212,23 @@ Finished building: ../src/Flash.c
  
 Building file: ../src/GPIO.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/GPIO.d" -MT"src/GPIO.o" -MT"src/GPIO.d" -o "src/GPIO.o" "../src/GPIO.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/GPIO.d" -MT"src/GPIO.o" -MT"src/GPIO.d" -o "src/GPIO.o" "../src/GPIO.c"
 Finished building: ../src/GPIO.c
  
 Building file: ../src/I2C.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/I2C.d" -MT"src/I2C.o" -MT"src/I2C.d" -o "src/I2C.o" "../src/I2C.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/I2C.d" -MT"src/I2C.o" -MT"src/I2C.d" -o "src/I2C.o" "../src/I2C.c"
 Finished building: ../src/I2C.c
  
 Building file: ../src/KeyPad.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/KeyPad.d" -MT"src/KeyPad.o" -MT"src/KeyPad.d" -o "src/KeyPad.o" "../src/KeyPad.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/KeyPad.d" -MT"src/KeyPad.o" -MT"src/KeyPad.d" -o "src/KeyPad.o" "../src/KeyPad.c"
 In file included from ../src/KeyPad.c:1:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/Timer.h:33:1: warning: "/*" within comment [-Wcomment]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc/Timer.h:33:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup TIMER_Public_Functions TIMER Public Functions
   
 In file included from ../src/KeyPad.c:3:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup GPIO_Public_Functions GPIO Public Functions
   
 ../src/KeyPad.c: In function 'KEYPAD_Read':
@@ -203,13 +243,13 @@ Finished building: ../src/KeyPad.c
  
 Building file: ../src/LCD.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -MT"src/LCD.d" -o "src/LCD.o" "../src/LCD.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/LCD.d" -MT"src/LCD.o" -MT"src/LCD.d" -o "src/LCD.o" "../src/LCD.c"
 In file included from ../src/LCD.c:1:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/Timer.h:33:1: warning: "/*" within comment [-Wcomment]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc/Timer.h:33:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup TIMER_Public_Functions TIMER Public Functions
   
 In file included from ../src/LCD.c:3:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup GPIO_Public_Functions GPIO Public Functions
   
 ../src/LCD.c: In function 'LCD_Init':
@@ -258,14 +298,14 @@ Finished building: ../src/LCD.c
  
 Building file: ../src/RTC.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/RTC.d" -MT"src/RTC.o" -MT"src/RTC.d" -o "src/RTC.o" "../src/RTC.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/RTC.d" -MT"src/RTC.o" -MT"src/RTC.d" -o "src/RTC.o" "../src/RTC.c"
 Finished building: ../src/RTC.c
  
 Building file: ../src/SPI.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/SPI.d" -MT"src/SPI.o" -MT"src/SPI.d" -o "src/SPI.o" "../src/SPI.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/SPI.d" -MT"src/SPI.o" -MT"src/SPI.d" -o "src/SPI.o" "../src/SPI.c"
 In file included from ../src/SPI.c:2:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc/gpio.h:34:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup GPIO_Public_Functions GPIO Public Functions
   
 ../src/SPI.c: In function 'SPI_Init':
@@ -283,41 +323,41 @@ Finished building: ../src/SPI.c
  
 Building file: ../src/Timer.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Timer.d" -MT"src/Timer.o" -MT"src/Timer.d" -o "src/Timer.o" "../src/Timer.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Timer.d" -MT"src/Timer.o" -MT"src/Timer.d" -o "src/Timer.o" "../src/Timer.c"
 In file included from ../src/Timer.c:1:0:
-C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc/Timer.h:33:1: warning: "/*" within comment [-Wcomment]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc/Timer.h:33:1: warning: "/*" within comment [-Wcomment]
  /** @defgroup TIMER_Public_Functions TIMER Public Functions
   
 Finished building: ../src/Timer.c
  
 Building file: ../src/eeprom.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/eeprom.d" -MT"src/eeprom.o" -MT"src/eeprom.d" -o "src/eeprom.o" "../src/eeprom.c"
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/eeprom.d" -MT"src/eeprom.o" -MT"src/eeprom.d" -o "src/eeprom.o" "../src/eeprom.c"
+In file included from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/portable.h:320:0,
+                 from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/FreeRTOS.h:83,
                  from ../src/eeprom.c:4:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h: In function 'ucPortCountLeadingZeros':
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h: In function 'ucPortCountLeadingZeros':
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: type of 'ulBitmap' defaults to 'int' [-Wimplicit-int]
   __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
                                                           ^~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: always_inline function might not be inlinable [-Wattributes]
 ../src/eeprom.c: In function 'EEPROM_Write':
 ../src/eeprom.c:37:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
-In file included from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/portable.h:320:0,
-                 from C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include/FreeRTOS.h:83,
+In file included from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/portable.h:320:0,
+                 from /Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include/FreeRTOS.h:83,
                  from ../src/eeprom.c:4:
 At top level:
-C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
+/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable/portmacro.h:171:58: warning: 'ucPortCountLeadingZeros' defined but not used [-Wunused-function]
   __attribute__( ( always_inline ) ) static unsigned char ucPortCountLeadingZeros( ulBitmap )
                                                           ^~~~~~~~~~~~~~~~~~~~~~~
 Finished building: ../src/eeprom.c
  
 Building file: ../src/lab5_font.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"C:\Faculdade\6_Semestre\SE2\SE2\LPC1769\inc" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\include" -I"C:\Faculdade\6_Semestre\SE2\SE2\FreeRTOS_Library\portable" -I"C:\Faculdade\6_Semestre\SE2\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lab5_font.d" -MT"src/lab5_font.o" -MT"src/lab5_font.d" -o "src/lab5_font.o" "../src/lab5_font.c"
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lab5_font.d" -MT"src/lab5_font.o" -MT"src/lab5_font.d" -o "src/lab5_font.o" "../src/lab5_font.c"
 ../src/lab5_font.c:22:40: warning: missing braces around initializer [-Wmissing-braces]
  const unsigned char font8x16[97][16] = {
                                         ^
@@ -327,7 +367,7 @@ Finished building: ../src/lab5_font.c
 Building target: libLPC1769.a
 Invoking: MCU Archiver
 arm-none-eabi-ar -r  "libLPC1769.a"  ./src/Ethernet.o ./src/Flash.o ./src/GPIO.o ./src/I2C.o ./src/KeyPad.o ./src/LCD.o ./src/RTC.o ./src/SPI.o ./src/Timer.o ./src/eeprom.o ./src/lab5_font.o   
-c:\nxp\MCUXpressoIDE_10.1.1_606\ide\tools\bin\arm-none-eabi-ar.exe: creating libLPC1769.a
+arm-none-eabi-ar: creating libLPC1769.a
 Finished building target: libLPC1769.a
  
 make --no-print-directory post-build
@@ -346,3 +386,51 @@ arm-none-eabi-size "libLPC1769.a" ; # arm-none-eabi-objdump -h -S "libLPC1769.a"
     268	      0	      0	    268	    10c	eeprom.o (ex libLPC1769.a)
    1552	      0	      0	   1552	    610	lab5_font.o (ex libLPC1769.a)
  
+17:51:51 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+make -r all 
+make: Nothing to be done for `all'.
+17:51:51 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
+make -r all 
+make: Nothing to be done for `all'.
+17:51:52 **** Incremental Build of configuration Debug for project LPC1769 ****
+make -r all 
+Building file: ../src/Ethernet.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/LPC1769/inc" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/include" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/FreeRTOS_Library/portable" -I"/Users/psychosnake/Documents/Informatica/ISEL/6_Semestre/SE2/SE2/CMSIS_CORE_LPC17xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Ethernet.d" -MT"src/Ethernet.o" -MT"src/Ethernet.d" -o "src/Ethernet.o" "../src/Ethernet.c"
+../src/Ethernet.c: In function 'Ethernet_Init':
+../src/Ethernet.c:130:6: warning: unused variable 'b' [-Wunused-variable]
+  int b = ReadFromPHY(2);
+      ^
+Finished building: ../src/Ethernet.c
+ 
+Building target: libLPC1769.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLPC1769.a"  ./src/Ethernet.o ./src/Flash.o ./src/GPIO.o ./src/I2C.o ./src/KeyPad.o ./src/LCD.o ./src/RTC.o ./src/SPI.o ./src/Timer.o ./src/eeprom.o ./src/lab5_font.o   
+arm-none-eabi-ar: creating libLPC1769.a
+Finished building target: libLPC1769.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libLPC1769.a" ; # arm-none-eabi-objdump -h -S "libLPC1769.a" >"libLPC1769.lss"
+   text	   data	    bss	    dec	    hex	filename
+   1340	      0	      0	   1340	    53c	Ethernet.o (ex libLPC1769.a)
+    234	      0	      0	    234	     ea	Flash.o (ex libLPC1769.a)
+    216	      0	      0	    216	     d8	GPIO.o (ex libLPC1769.a)
+    976	      0	    148	   1124	    464	I2C.o (ex libLPC1769.a)
+    304	     32	     12	    348	    15c	KeyPad.o (ex libLPC1769.a)
+   1210	      8	     20	   1238	    4d6	LCD.o (ex libLPC1769.a)
+    432	      0	      0	    432	    1b0	RTC.o (ex libLPC1769.a)
+    252	      0	      0	    252	     fc	SPI.o (ex libLPC1769.a)
+    158	      0	      0	    158	     9e	Timer.o (ex libLPC1769.a)
+    268	      0	      0	    268	    10c	eeprom.o (ex libLPC1769.a)
+   1552	      0	      0	   1552	    610	lab5_font.o (ex libLPC1769.a)
+ 
+17:51:54 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+make -r all 
+make: Nothing to be done for `all'.
+17:51:55 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
+make -r all 
+make: Nothing to be done for `all'.
+17:51:55 **** Incremental Build of configuration Debug for project LPC1769 ****
+make -r all 
+make: Nothing to be done for `all'.
