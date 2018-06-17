@@ -5,9 +5,13 @@
  * 
  * Brief Explanation of the Project development:
  * 
- * 	The project proposed in this semester for Embedded Systems 1 was the Tic-Tac-Toe. It was used the LPC2106 ARM7TDMI-S Microcontroller
- * 	with the HEADER BOARD Olimex LPC-H2106. It's needed peripherals were studied and developed APIs for use in the application.
- * 	Such peripherals are GPIO, TIMER0, SPI, RTC, IAP. For application use it was created an abstraction for these APIs to provide
+ * 	The project proposed in this semester for Embedded Systems 2 was the Tic-Tac-Toe. It will be implemented on an LPCXpresso 
+ *  LPC1769 development board from NXP wich includes a microcontroler LPC1769. This microcontroler has a processor ARM Cortex - M3.
+ * 	It's needed peripherals were studied and developed APIs for use in the application.
+ * 	Such peripherals are GPIO, TIMER0, SPI, RTC. To save the results of the game, it was used an EEPROM (24LC256) with an I2C interface.
+ *	Also implemented was the Ethernet peripheral. With this addition we could play Tic-Tac-Toe with a remote player. But this
+ *  is a feature to be added.
+ *  For application use it was created an abstraction for these APIs to provide
  * 	easier use and better understanding(represented in the AppHierarchy Schematic). 
  * 	The application is divided into three modes:
  * 
